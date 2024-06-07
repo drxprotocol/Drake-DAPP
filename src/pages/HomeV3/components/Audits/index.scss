@@ -1,0 +1,126 @@
+.h_audits_v3{
+    margin-top: 150px;
+    margin-bottom: 230px;
+
+    .title_box{
+        max-width: 683px;
+    }
+
+    .title{
+        margin: 0;
+    }
+
+    .title_g{
+        font-size: 24px;
+    }
+
+    .a_lear_more{
+        padding: 16px 20px;
+        background-color: #1e293b;
+    }
+
+    .ic_audits_logo{
+        width: 263px;
+        height: 26px;
+        background-image: url('./img/bg_audits.svg');
+    }
+
+    .go_to_trading{
+        padding: 36px;
+        background-color: #3b82f6;
+        font-size: 32px;
+        line-height: 42px;
+        font-family: "SpaceGrotesk-Bold";
+
+        .arrow_trading{
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    .go_to_trading.disable{
+        background-color: #1e293b;
+    }
+
+    .bg_pic_placeholder{
+        position: absolute;
+        width: 1176px;
+        height: 1px;
+
+        .bg_pic{
+            position: relative;
+            left: -1300px;
+            z-index: -2;
+            width: 1740px;
+            height: 1000px;
+            background-image: url('./img/bg_ellipse.svg');
+            background-repeat: no-repeat;
+            background-position-y: -260px;
+        }
+    }
+
+    @media screen and (max-width: 769px) {
+        margin-top: 0px;
+        margin-bottom: 100px;
+
+        .title{
+            font-size: 18px;
+        }
+
+        .title_g{
+            font-size: 18px;
+        }
+
+        .ic_audits_logo{
+            margin-top: 50px;
+        }
+
+        .go_to_trading{
+            padding: 16px;
+            font-size: 16px;
+            line-height: normal;
+
+
+            .arrow_trading{
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        .bg_pic_placeholder{
+            width: 100%;
+
+            .bg_pic{
+                left: 0px;
+                top: 500px;
+                width: 100%;
+                height: 680px;
+                background-image: url('./img/bg_ellipse_m.svg');
+                background-position-y: 0px;
+                background-size: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 391px) {
+        .bg_pic_placeholder{
+            .bg_pic{
+                left: 0px;
+                top: 540px;
+                width: 100%;
+                height: 640px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 361px) {
+        .bg_pic_placeholder{
+            .bg_pic{
+                left: 0px;
+                top: 550px;
+                width: 100%;
+                height: 630px;
+            }
+        }
+    }
+}

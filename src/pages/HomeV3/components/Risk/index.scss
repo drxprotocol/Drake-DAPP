@@ -1,0 +1,112 @@
+.risk_management_v3{
+    margin-bottom: 140px;
+
+    .title_box{
+
+        .title_g{
+            font-size: 24px;
+        }
+    }
+
+    .risk_items{
+        margin-top: 77px;
+    }
+
+    .risk_item_box{
+        padding: 32px;
+        width: 378px;
+        height: 380px;
+        background-color: #0f172a;
+
+        .r_i_title{
+            margin-top: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .r_i_title_1{
+            color: #63b7da;
+        }
+
+        .r_i_title_2{
+            color: #66ab82;
+        }
+
+        .r_i_title_3{
+            color: #e2a56d;
+        }
+    }
+
+    @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+        .top_tips.squircle_border::after{
+            background-color: #1e293b;
+        }
+
+
+        .r_i_b_1.risk_item_box.squircle_border::after{
+            background: var(--c3, linear-gradient(0deg, #8d85d9 0%, #63b7da 100%));
+            --squircle-radius: 20px;
+        }
+
+        .r_i_b_2.risk_item_box.squircle_border::after{
+            background: var(--c3, linear-gradient(0deg, #f5df85 0%, #66ab82 100%));
+            --squircle-radius: 20px;
+        }
+
+        .r_i_b_3.risk_item_box.squircle_border::after{
+            background: var(--c3, linear-gradient(0deg, #a65986 0%, #e2a56d 100%));
+            --squircle-radius: 20px;
+        }
+    }
+
+    @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+        .top_tips.squircle_border::after{
+            border: 1px solid #1e293b;
+        }
+    }
+
+
+
+
+    .risk_icon{
+        width: 72px;
+        height: 72px;
+        margin-bottom: 20px;
+    }
+
+    .risk_icon_1{
+        background-image: url('./img/ic_risk_1.svg');
+    }
+
+    .risk_icon_2{
+        background-image: url('./img/ic_risk_2.svg');
+    }
+
+    .risk_icon_3{
+        background-image: url('./img/ic_risk_3.svg');
+    }
+
+
+    .r_title{
+
+    }
+
+    @media screen and (max-width: 769px) {
+        margin-top: 0px;
+        margin-bottom: 100px;
+
+        .title_box{
+            .title{
+                font-size: 32px;
+            }
+
+            .title_g{
+                font-size: 24px;
+            }
+        }
+
+        .risk_item_box{
+            height: auto !important;
+        }
+    }
+}

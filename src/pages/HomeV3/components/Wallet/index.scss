@@ -1,0 +1,124 @@
+.wallet_feature_v3{
+    margin-bottom: 200px;
+
+    .w_f_title{
+        color: #f8fafc;
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .w_f_title1{
+        margin-top: 65px;
+        margin-bottom: 40px;
+    }
+
+    .w_f_item_sub{
+        width: 576px;
+        height: 465px;
+        padding: 0px 74px;
+        background-color: #0f172a;
+    }
+
+    @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+        .w_f_item_sub.squircle_border::after{
+            background-color: #1e293b;
+        }
+    }
+
+    @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+        .w_f_item_sub.squircle_border::after{
+            border: 1px solid #1e293b;
+        }
+    }
+
+    .w_f_bg_1{
+        .pic{
+            width: 420px;
+            height: 274px;
+        }
+    }
+
+    .w_f_item_b{
+        position: relative;
+        background-color: transparent;
+
+        .bg_w_f_item_b{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/bg_wallet_gift.svg');
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            border-radius: 20px;
+        }
+    }
+
+
+    .w_ic_gift{
+        width: 84px;
+        height: 84px;
+        margin-bottom: 40px;
+        background-image: url('./img/ic_wallet_gift.svg');
+    }
+
+    .w_f_i_title_s{
+        color: #64748b;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    @media screen and (max-width: 769px) {
+        margin-bottom: 100px;
+
+        .w_f_title{
+            font-size: 20px;
+            line-height: normal;
+        }
+
+        .w_f_title1{
+            margin-top: 52px;
+            margin-bottom: 48px;
+        }
+
+        .w_f_i_title_s{
+            font-size: 16px;
+            line-height: normal;
+        }
+
+        .w_f_item{
+            width: 100%;
+            height: auto;
+        }
+
+        .w_f_item:last-child{
+            margin-top: 50px;
+        }
+
+        .w_f_item_sub{
+            width: 100%;
+            height: auto;
+            padding: 0px 20px;
+        }
+
+        .w_f_item_b{
+            padding: 50px 20px;
+        }
+
+        .w_f_bg_1{
+            .pic{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .w_f_item_b{
+            .bg_w_f_item_b{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

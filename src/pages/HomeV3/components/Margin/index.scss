@@ -1,0 +1,94 @@
+.margin_feature_v3{
+    .title{
+        margin: 0;
+        color: #ffffff;
+    }
+    .title.title_b_g{
+        background: var(--Gradient-1, linear-gradient(93deg, #534289 2.44%, #D55B89 52.53%, #F3AFCD 76.46%, #E7BCFB 92.5%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .m_ui_demo_box{
+        margin-top: 36px;
+        margin-bottom: 115px;
+
+        .m_demo_item{
+            max-width: 378px;
+            height: 320px;
+            padding: 20px 12px;
+            padding-bottom: 0px;
+            background-color: #0f172a;
+            overflow-y: hidden;
+
+            .m_d_title{
+                color: #f8fafc;
+            }
+
+            .m_d_title_s{
+                color: #64748b;
+                font-size: 14px;
+            }
+
+            .m_d_bg_1{
+                width: 320px;
+                height: 215px;
+                margin-top: 20px;
+                background-image: url('./img/bg_margin_ui_demo1.svg');
+                background-repeat: no-repeat;
+
+                @media screen and (max-width: 769px) {
+                    background-image: url('./img/bg_margin_ui_demo1.png');
+                    background-size: 100%;
+                }
+            }
+
+            .m_d_bg_2{
+                width: 320px;
+                height: 206px;
+                margin-top: 20px;
+                background-image: url('./img/bg_margin_ui_demo2.svg');
+                background-repeat: no-repeat;
+
+                @media screen and (max-width: 769px) {
+                    background-image: url('./img/bg_margin_ui_demo2.png');
+                    background-size: 100%;
+                }
+            }
+
+            .m_d_bg_3{
+                width: 320px;
+                height: 204px;
+                margin-top: 20px;
+                background-image: url('./img/bg_margin_ui_demo3.svg');
+                background-repeat: no-repeat;
+
+                @media screen and (max-width: 769px) {
+                    background-image: url('./img/bg_margin_ui_demo3.png');
+                    background-size: 100%;
+                }
+            }
+
+        }
+
+        @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+            .m_demo_item.squircle_border::after{
+                background-color: #1e293b;
+            }
+        }
+
+        @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+            .m_demo_item.squircle_border::after{
+                border: 1px solid #1e293b;
+            }
+        }
+    }
+
+    @media screen and (max-width: 769px) {
+        .m_ui_demo_box{
+            margin-bottom: 45px;
+        }
+    }
+
+}

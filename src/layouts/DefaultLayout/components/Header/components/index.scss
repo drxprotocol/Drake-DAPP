@@ -1,0 +1,170 @@
+.network_change_container {
+
+    .title {
+        width: 100%;
+        color: #e2e8f0;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .user_info_container {
+        margin-top: 24px;
+        .account_address_wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .account {
+                margin-left: 10px;
+            }
+            .network_box {
+                display: flex;
+                align-items: center;
+                margin-left: 10px;
+                padding: 6px 23px;
+                background: #1e293b;
+                .dot {
+                    width: 8px;
+                    height: 8px;
+                    margin-right: 10px;
+                    background: #3b82f6;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: 100%;
+        margin-top: 25px;
+
+        .switch_btn {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            color: #fff;
+            background: #3b82f6;
+        }
+        .switch_btn:active {
+            background: #3b82f6;
+        }
+    }
+}
+
+.settings_view_pop {
+    .ant-popover-inner{
+        background-color: transparent;
+        background-clip: padding-box;
+        border-radius: 8px;
+        box-shadow: none;
+        padding: 15px 0px 0px 0px;
+    }
+
+    .settings_content{
+        width: 344px;
+        padding: 0px !important;
+    }
+
+    .settings_content_split{
+        border-top: 1px solid #1e293b;
+    }
+
+    .settings_item{
+        width: 145px;
+    }
+
+    .settings_sub_item.active{
+        width: 145px;
+    }
+
+    .s_l_icon{
+        width: 28px;
+        height: 21px;
+        margin-top: 2px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .s_l_icon_en{
+        background-image: url('./img/icon_language_en.svg');
+    }
+
+    .s_l_icon_korean{
+        background-image: url('./img/icon_language_korean.svg');
+    }
+
+    .s_l_icon_cn{
+        background-image: url('./img/icon_language_cn.svg');
+    }
+
+}
+
+.account_view_pop {
+    min-width: 355px;
+
+    .ant-popover-inner{
+        background-color: transparent;
+        background-clip: padding-box;
+        border-radius: 8px;
+        box-shadow: none;
+        padding: 15px 0px 0px 0px;
+    }
+
+    .account_title,
+    .transactions_title {
+        margin-top: 15px;
+        font-size: 22px;
+        font-family: 'Switzer-Semibold';
+        line-height: 32px;
+    }
+
+    .transactions_title {
+        font-size: 18px;
+    }
+
+    .account_change_box {
+        width: 100%;
+
+        .address {
+            width: 175px;
+            margin-left: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .change {
+            padding: 4px 12px;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #e7ecef;
+            cursor: pointer;
+        }
+    }
+
+    .account_view_pop_content{
+        .tx_content{
+            max-width: 250px;
+        }
+    }
+}
+
+
+.block_tips_bar{
+    width: 100%;
+    padding: 8px;
+    background: var(--primary-gradient, linear-gradient(91deg, #274BC4 4.24%, #6EDEF2 61.63%, #D8E3E3 100.11%));
+    color: #1e293b;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.theme_light{
+    .settings_view_pop {
+        .settings_content_split{
+            border-top: 1px solid #e2e8f0;
+        }
+    }
+}

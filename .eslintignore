@@ -1,0 +1,19 @@
+# ignore Directories
+build/
+tests/
+demo/
+/doc/
+/node_modules/
+/public/
+/.git
+/.vscode
+
+coverage/
+
+# ignore files
+**/*-min.js
+**/*.min.js
+/src/transport-layer/ResponseCode.js
+config-overrides.js
+serviceWorker.js
+

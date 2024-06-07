@@ -1,0 +1,81 @@
+.highlights{
+    margin-bottom: 200px;
+
+    .h_title{
+        color: #ffffff;
+        font-size: 44px;
+    }
+
+    .h_item{
+        width: 378px;
+        height: 112px;
+        padding: 24px;
+
+        .h_i_title{
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        .h_i_content{
+            max-width: 265px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+
+        .h_i_icon{
+            width: 50px;
+            height: 50px;
+            margin-right: 12px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .i_custody {
+            background-image: url('./img/i_custody.svg');
+        }
+        .i_assets {
+            background-image: url('./img/i_assets.svg');
+        }
+        .i_gas_free {
+            background-image: url('./img/i_gas_free.svg');
+        }
+        .i_onboarding {
+            background-image: url('./img/i_onboarding.svg');
+        }
+        .i_lightning {
+            background-image: url('./img/i_lightning.svg');
+        }
+        .i_low_fees {
+            background-image: url('./img/i_low_fees.svg');
+        }
+    }
+
+    @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+        .h_item.squircle_border::after{
+            background: var(--c3, linear-gradient(90deg, #F0D162 0%, #EC7FDA 100%));
+            --squircle-radius: 20px;
+        }
+    }
+
+    @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+        .h_item.squircle_border::after{
+            border: 1px solid #94a3b8;
+            border-radius: 20px;
+        }
+    }
+
+
+    @media screen and (max-width: 1025px) {
+        margin-bottom: 100px;
+
+        .i_icon_44.i_sparkle{
+            width: 32px;
+            height: 32px;
+        }
+
+        .h_title{
+            font-size: 28px;
+        }
+    }
+}

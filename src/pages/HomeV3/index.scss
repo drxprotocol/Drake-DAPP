@@ -1,0 +1,105 @@
+.root_container_hp{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.hp_section{
+    .ss_title{
+        color: #3b82f6;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .sss_title{
+        margin-left: 5px;
+        color: #3b82f6;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+    .s_title{
+        color: #ffffff;
+        font-size: 25px;
+        line-height: 32px;
+    }
+
+    .title,
+    .title_b_g{
+        margin: 15px 0;
+        font-family: 'Switzer-Bold';
+        color: #f8fafc;
+        font-size: 48px;
+        line-height: 63px;
+    }
+    .title_b_g{
+        color: #64748b;
+    }
+    .title_f{
+        color: #f8fafc;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .title_g{
+        color: #64748b;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .title_green{
+        color: #22C55E;
+    }
+
+    .title.f_cds_b{
+        font-family: 'ClashDisplay-Bold';
+    }
+
+    .title_g.f_14{
+        font-size: 14px;
+    }
+
+    .bg_box{
+        background-color: #0f172a;
+    }
+
+    @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+        .bg_box.squircle_border::after{
+            background-color: #1e293b;
+        }
+    }
+
+    @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+        .bg_box.squircle_border::after{
+            border: 1px solid #1e293b;
+        }
+    }
+
+    @media screen and (max-width: 769px) {
+        .ss_title{
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .sss_title{
+            font-size: 14px;
+            line-height: normal;
+        }
+
+        .s_title{
+            font-size: 18px;
+        }
+
+        .title{
+            font-size: 24px;
+            line-height: normal;
+        }
+
+        .title_f{
+            font-size: 20px;
+            line-height: normal;
+        }
+        .title_g{
+            font-size: 16px;
+            line-height: normal;
+        }
+    }
+}

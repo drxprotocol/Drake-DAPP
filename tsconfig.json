@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "target": "ESNext",
+        "emitDecoratorMetadata": true,
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "allowJs": true,
+        "skipLibCheck": false,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "baseUrl": "src",
+        "typeRoots": ["./node_modules/@types/"]
+    },
+    "paths": {
+        "@assets/*": ["assets/*"],
+        "@components/*": ["components/*"],
+        "@pages/*": ["pages/*"],
+        "@utils/*": ["utils/*"],
+        "@/api/*": ["api/*"],
+        "@/assets/*": ["assets/*"],
+        "@/contract/*": ["contract/*"],
+        "@/hooks/*": ["hooks/*"],
+        "@/components/*": ["components/*"],
+        "@/pages/*": ["pages/*"],
+        "@/routes": ["routes/index.js"],
+        "@/*": ["*"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "build"]
+}

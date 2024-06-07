@@ -1,0 +1,55 @@
+.arbitrage_feature_v3{
+
+    .title{
+        max-width: 835px;
+        margin: 0;
+    }
+
+    .title_c{
+        background: var(--Primary-Gradient, linear-gradient(91deg, #274BC4 4.24%, #6EDEF2 61.63%, #D8E3E3 100.11%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "SpaceGrotesk-Bold";
+    }
+
+    .pic_box{
+        margin-top: 72px;
+        padding: 12px;
+
+        .pic{
+            padding: 88px 68px;
+        }
+    }
+
+    .a_tips{
+        padding: 12px 20px;
+        color: #64748b;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media screen and (max-width: 769px) {
+        margin-bottom: 100px;
+
+        .title{
+            font-size: 32px;
+        }
+
+        .pic_box{
+            margin-top: 40px;
+
+            .pic{
+                padding: 25px 0px;
+                img{
+                    width: 95%;
+                }
+            }
+        }
+
+        .a_tips{
+            font-size: 14px;
+            line-height: normal;
+        }
+    }
+}
