@@ -1,0 +1,303 @@
+.e_main_section {
+    .title_box{
+        width: 100%;
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        }
+    }
+
+    .e_main_item{
+        width: 548px;
+
+        .e_main_item_content{
+            width: 100%;
+        }
+
+        .e_i_title{
+            color: #e2e8f0;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    .e_main_item_content_metrics{
+        .i_price_icon{
+            margin-top: 2px;
+        }
+    }
+
+    .ant-segmented{
+        width: 100%;
+        font-size: 14px;
+
+        .ant-segmented-item{
+            width: 256px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+    }
+
+    .amount_box{
+        width: 325px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    .calendar_box{
+        width: 165px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    .vault_selector_box{
+        padding: 8px 12px;
+        background-color: #1e293b;
+    }
+
+    .duration_selector_box{
+        padding: 12px 12px;
+        background-color: #1e293b;
+    }
+
+    .request_redeem_btn_box{
+        width: 180px;
+
+        .sub_btn_primary{
+            padding: 12px 20px;
+        }
+    }
+
+    .my_staking_metrics_box{
+        padding: 35px 25px;
+
+        .m_s_m_item{
+            .c_text{
+                font-size: 16px;
+            }
+
+            .c_hl{
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 35px 16px;
+
+            .m_s_m_item{
+                width: 130px;
+
+                .c_text{
+                    font-size: 14px;
+                }
+
+                .c_hl{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+
+    .staking_list_box{
+        width: 100%;
+
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        }
+    }
+
+    .staking_record_item,
+    .redeem_record_item{
+        align-items: center;
+        padding: 10px 20px;
+
+        @media screen and (max-width: 768px) {
+            padding: 10px 13px;
+
+            .metric{
+                width: 130px;
+            }
+
+            .tag{
+                width: auto;
+                padding: 6px 12px;
+                background: var(--neutral-n-6, #1e293b);
+            }
+        }
+    }
+
+    .my_staking_table,
+    .my_redeem_table{
+        .staking_type{
+            width: 100px;
+        }
+
+        .staking_id{
+            width: 80px;
+            margin-left: 5px;
+        }
+
+        .staking_amount{
+            width: 100px;
+        }
+
+        .redeem_amount{
+            width: 150px;
+        }
+
+        .staking_deposited{
+            width: 100px;
+        }
+
+        .staking_release_time{
+            width: 100px;
+        }
+
+        .staking_lock_duration{
+            width: 100px;
+        }
+
+        .staking_rewards{
+            width: 120px;
+        }
+
+        .staking_operations{
+            width: 200px;
+        }
+
+        .redeem_request_operations{
+            width: 350px;
+        }
+    }
+
+    .my_staking_table{
+        .staking_type{
+            width: 100px;
+        }
+
+        .staking_id{
+            width: 50px;
+            margin-left: 5px;
+        }
+
+        .staking_amount{
+            width: 100px;
+        }
+
+        .redeem_amount{
+            width: 130px;
+        }
+
+        .staking_deposited{
+            width: 100px;
+        }
+
+        .staking_release_time{
+            width: 80px;
+        }
+
+        .staking_lock_duration{
+            width: 100px;
+        }
+
+        .staking_rewards{
+            width: 120px;
+        }
+
+        .staking_operations{
+            width: 270px;
+        }
+    }
+
+    .tag{
+        width: 100%;
+        padding: 6px 12px;
+        background-color: #1e293b;
+    }
+
+    .staking_list_btn{
+        padding: 12px 20px;
+        background-color: #f8fafc;
+        color: #1e293b;
+    }
+
+    .staking_list_btn.disable{
+        background-color: #1e293b;
+        color: #64748b;
+        cursor: not-allowed;
+    }
+
+    .days_left_tag{
+        padding: 12px 12px;
+        background-color: #1e293b;
+        color: #f8fafc;
+    }
+}
+
+
+.theme_light {
+    .e_main_section {
+        .e_main_item{
+            .e_i_title{
+                color: #64748b;
+            }
+        }
+
+        .duration_selector_box{
+            background-color: #f8fafc;
+        }
+
+        .vault_selector_box{
+            background-color: #f8fafc;
+        }
+
+        @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+            .vault_selector_box::after{
+                background-color: #e2e8f0;
+            }
+        }
+
+        @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+            .vault_selector_box{
+                border: 1px solid #e2e8f0;
+            }
+        }
+
+        .staking_list_btn{
+            background-color: #e2e8f0;
+            color: #1e293b;
+            @media screen and (max-width: 768px) {
+                background-color: #e2e8f0;
+            }
+        }
+
+        .staking_list_btn.disable{
+            background-color: #e2e8f0;
+            color: #64748b;
+            @media screen and (max-width: 768px) {
+                background-color: #e2e8f0;
+            }
+        }
+
+        .days_left_tag{
+            background-color: #e2e8f0;
+            color: #1e293b;
+        }
+
+        .staking_record_item,
+        .redeem_record_item{
+            @media screen and (max-width: 768px) {
+                .tag{
+                    background: var(--neutral-n-6, #e2e8f0);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.e_about {
+    .e_a_content {
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+    .e_a_content_graph{
+        width: 100%;
+        overflow-x: auto;
+        padding: 20px;
+        background: #0f172a;
+
+        .g_content_box{
+            width: 935px;
+        }
+    }
+
+    .bg_about_earn{
+        width: 889px;
+        height: 370px;
+        background-image: url('./img/bg_about_earn.svg');
+        background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 769px) {
+        .e_a_content_graph{
+            .g_content_box{
+                width: 100%;
+            }
+        }
+
+        .bg_about_earn{
+            width: 321px;
+            height: 544px;
+            background-image: url('./img/bg_about_earn_m.svg');
+            background-repeat: no-repeat;
+        }
+    }
+
+    .about_graph_content_box{
+        width: 100%;
+        padding: 12px 20px;
+        margin-top: 50px;
+        background: #1e293b;
+        color: #94a3b8;
+    }
+
+    @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+        .about_graph_content_box.squircle_border::after{
+            background-color: #334155;
+        }
+    }
+
+    @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+        .about_graph_content_box.squircle_border::after{
+            border: 1px solid #334155;
+        }
+    }
+}
+
+.theme_light{
+    .e_about {
+        .e_a_content_graph{
+            background: #f1f5f9;
+        }
+
+        .bg_about_earn{
+            background-image: url('./img/bg_about_earn_l.svg');
+        }
+
+        @media screen and (max-width: 769px) {
+            .bg_about_earn{
+                background-image: url('./img/bg_about_earn_l_m.svg');
+            }
+        }
+
+        .about_graph_content_box{
+            background: #e2e8f0;
+            color: #475569;
+        }
+
+        @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+            .about_graph_content_box.squircle_border::after{
+                background-color: #cbd5e1;
+            }
+        }
+
+        @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+            .about_graph_content_box.squircle_border::after{
+                border: 1px solid #cbd5e1;
+            }
+        }
+    }
+}

@@ -1,0 +1,204 @@
+.f_r_main_section {
+    color: #ffffff;
+
+    .how_it_works_box{
+        min-height: 100px;
+        //background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+        background: var(--Neutral-Greys-900, #0F172A);
+
+        .h_i_w_content_box{
+            padding: 16px 12px;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .h_title{
+            color: #f4f4f6;
+            font-size: 18px;
+        }
+
+        .h_content{
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .h_flow{
+            padding: 16px;
+        }
+
+        .h_flow_text{
+            margin-left: 12px;
+            color: #f4f4f6;
+            font-size: 14px;
+        }
+
+        .h_f_icon{
+            width: 52px;
+            height: 52px;
+        }
+
+        .i_f_icon_up {
+            background-image: url('./img/i_f_icon_up.svg');
+        }
+
+        .i_f_icon_down {
+            background-image: url('./img/i_f_icon_down.svg');
+        }
+
+        .i_f_icon_money {
+            background-image: url('./img/i_f_icon_money.svg');
+        }
+
+        .i_f_icon_arrow {
+            width: 58px;
+            height: 8px;
+            background-image: url('./img/i_f_icon_arrow.svg');
+        }
+    }
+
+
+    .f_r_section_item{
+        width: 550px;
+        //background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+        background: var(--Neutral-Greys-900, #0F172A);
+    }
+
+    .f_r_section_item_l{
+        height: 370px;
+    }
+
+    .f_r_section_item_s{
+        height: 220px;
+    }
+
+    .f_r_section_item_content,
+    .f_r_section_item_content_nb{
+        padding: 16px 12px;
+    }
+
+    .f_r_section_item_content{
+        border-bottom: 1px solid #1e293b;
+    }
+
+
+
+    .f_r_s_bg{
+        background-color: #1e293b;
+    }
+
+    .f_r_title{
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    .f_r_s_title{
+        color: #64748b;
+    }
+
+    .funding_fee_stats{
+        .s_item{
+            padding: 6px 12px;
+            color: #ffffff;
+            font-size: 14px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .s_item:last-child{
+            border-bottom: 0px;
+        }
+
+        .s_item_token{
+            width: 80px;
+        }
+        .s_item_metric{
+            width: 205px;
+        }
+    }
+
+
+    .f_risk_allocation{
+        .allocation_box{
+            width: 100%;
+            height: 12px;
+
+            .a_item{
+                height: 12px;
+            }
+
+            .a_left{
+                background-color: #8d6cea;
+                border-radius:  900px 0 0 900px;
+            }
+
+            .a_right{
+                background-color: #f09759;
+                border-radius: 0 900px 900px 0;
+            }
+        }
+    }
+
+    .text_input.i_number_has_icon{
+        padding: 10px;
+
+        .text_input.i_number{
+            padding: 0;
+        }
+    }
+
+    .funding_rate_form{
+        .f_r_section_item_content{
+            padding: 16px 20px;
+        }
+
+        .f_r_section_item_content.tab_box{
+            padding-bottom: 0px;
+        }
+
+        .deposit_tips_box{
+            padding: 8px;
+            background-color: #171d30;
+        }
+    }
+
+    .profit_calculator{
+        .input_amount{
+            width: 230px;
+        }
+
+        .input_rate{
+            width: 132px;
+        }
+
+        .input_deposit_length{
+            width: 132px;
+        }
+
+
+        .day_option_item{
+            padding: 4px 8px;
+            background-color: #1e293b;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        .day_option_item.active{
+            background-color: #334155;
+            color: #ffffff;
+        }
+
+        @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+            .day_option_item.active.squircle_border::after{
+                background: #eff6ff;
+            }
+        }
+
+        @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+            .day_option_item.active.squircle_border::after{
+                border: 1px solid #eff6ff;
+            }
+        }
+    }
+
+    .your_stats{
+
+    }
+}
