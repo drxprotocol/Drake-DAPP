@@ -7,14 +7,14 @@ import {buildToken} from "../../../../../hooks/useTrdingMeta";
 
 const mockFundingFeeStats = [
     {
-        asset: buildToken('ETH'),
-        fundingFeeL: new Amount(0.0023),
-        fundingFeeS: new Amount(0.0023),
+        asset: buildToken('WBTC'),
+        fundingFeeL: new Amount(-0.0023),
+        fundingFeeS: new Amount(-0.0023),
     },
     {
-        asset: buildToken('WBTC'),
-        fundingFeeL: new Amount(0.0023),
-        fundingFeeS: new Amount(0.0023),
+        asset: buildToken('ETH'),
+        fundingFeeL: new Amount(-0.0023),
+        fundingFeeS: new Amount(-0.0023),
     },
 ];
 
@@ -34,7 +34,7 @@ const FundingFeeStats = () => {
                         <div className={`f_r_b s_item w_100`} key={index}>
                             <div className={'f_r_l s_item_token'}>
                                 <CoinIcon logo={record?.asset?.logoURI} className='coin_icon_20'/>
-                                <div className={'m_l_10 f_14 b c_hl'}>{`${record?.asset?.name}`}</div>
+                                <div className={'m_l_10 f_14 b c_hl'}>{`${record?.asset?.localName}`}</div>
                             </div>
 
                             <div className={'f_r_l s_item_metric'}>
@@ -57,17 +57,17 @@ const FundingFeeStats = () => {
 
 const mockRiskAllocation = [
     {
-        asset: buildToken('ETH'),
-        allocation: 40,
+        asset: buildToken('WBTC'),
+        allocation: 50,
         style: {
-            width: `40%`,
+            width: `50%`,
         }
     },
     {
-        asset: buildToken('WBTC'),
-        allocation: 60,
+        asset: buildToken('ETH'),
+        allocation: 50,
         style: {
-            width: `60%`,
+            width: `50%`,
         }
     },
 ];
@@ -91,11 +91,11 @@ const CurrentRiskAllocation = () => {
                 <div className={`f_r_b`}>
                     <div className={'f_r_l f_16'}>
                         <div className={''}>{`${riskAllocation[0]?.allocation}%`}</div>
-                        <div className={'m_l_3'}>{`${riskAllocation[0]?.asset?.name}`}</div>
+                        <div className={'m_l_3'}>{`${riskAllocation[0]?.asset?.localName}`}</div>
                     </div>
                     <div className={'f_r_l f_16'}>
                         <div className={''}>{`${riskAllocation[1]?.allocation}%`}</div>
-                        <div className={'m_l_3'}>{`${riskAllocation[1]?.asset?.name}`}</div>
+                        <div className={'m_l_3'}>{`${riskAllocation[1]?.asset?.localName}`}</div>
                     </div>
                 </div>
 

@@ -20,11 +20,11 @@ const About = () => {
                 */}
 
                 <div className={'r_20 squircle_border e_a_content_graph m_t_25'}>
-                    <div className={`f_c_c_c g_content_box`}>
+                    <div className={`f_c_c_c g_content_box w_100`}>
                         <div className={`bg_about_earn m_t_20`}></div>
 
                         <div className={`w_100`}>
-                            <div className={`r_12 squircle_border f_16 about_graph_content_box`}>
+                            <div className={`r_12 text_center squircle_border f_16 about_graph_content_box`}>
                                 {`*commission fee, borrowing fee, isolated-margin mode additional margin fee, cross-margin mode liability interest`}
                             </div>
                         </div>

@@ -39,7 +39,7 @@ const FundingRateMain = () => {
     return (
         <div className={'f_c_l w_100 trade_sections f_r_main_section'}>
             <div className={'f_c_l w_100'}>
-                <div className={'e_h2 title_box'}>{`Funding rate vault`}</div>
+                <div className={'e_h2 title_box'}>{`Funding Rate Vault`}</div>
             </div>
 
             <HowItWorks/>

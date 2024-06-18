@@ -17,15 +17,15 @@ const YourStats = ({token}) => {
             <div className={`f_c_l gap-3 w_100 f_r_section_item_content_nb f_14`}>
                 <div className={`f_r_b w_100`}>
                     <div className={`c_text`}>{`Your Deposit`}</div>
-                    <div className={`t_dashed_underline`}>{`1000 USDC`}</div>
+                    <div className={`t_dashed_underline`}>{`0 USDC`}</div>
                 </div>
                 <div className={`f_r_b w_100`}>
                     <div className={`c_text`}>{`Your iUSDC Balance`}</div>
-                    <div className={`t_dashed_underline`}>{`1100 USDC`}</div>
+                    <div className={`t_dashed_underline`}>{`0 USDC`}</div>
                 </div>
                 <div className={`f_r_b w_100`}>
                     <div className={`c_text`}>{`Your USDC Balance`}</div>
-                    <div className={`t_dashed_underline`}>{`1200 USDC`}</div>
+                    <div className={`t_dashed_underline`}>{`0 USDC`}</div>
                 </div>
             </div>
         </div>

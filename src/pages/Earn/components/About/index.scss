@@ -11,7 +11,7 @@
         background: #0f172a;
 
         .g_content_box{
-            width: 935px;
+            width: 100%;
         }
     }
 
@@ -19,6 +19,13 @@
         width: 889px;
         height: 370px;
         background-image: url('./img/bg_about_earn.svg');
+        background-repeat: no-repeat;
+    }
+
+    .bg_about_funding_rate{
+        width: 1040px;
+        height: 421px;
+        background-image: url('./img/bg_about_funding_rate.svg');
         background-repeat: no-repeat;
     }
 
@@ -35,6 +42,13 @@
             background-image: url('./img/bg_about_earn_m.svg');
             background-repeat: no-repeat;
         }
+
+        .bg_about_funding_rate{
+            width: 285px;
+            height: 504px;
+            background-image: url('./img/bg_about_funding_rate_m.svg');
+            background-repeat: no-repeat;
+        }
     }
 
     .about_graph_content_box{
@@ -43,6 +57,15 @@
         margin-top: 50px;
         background: #1e293b;
         color: #94a3b8;
+    }
+
+    .about_graph_content_nb_box{
+        color: #64748b;
+        font-size: 14px;
+    }
+
+    .about_graph_content_box_funding{
+        margin-top: 10px;
     }
 
     @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
@@ -68,9 +91,17 @@
             background-image: url('./img/bg_about_earn_l.svg');
         }
 
+        .bg_about_funding_rate{
+            background-image: url('./img/bg_about_funding_rate_l.svg');
+        }
+
         @media screen and (max-width: 769px) {
             .bg_about_earn{
                 background-image: url('./img/bg_about_earn_l_m.svg');
+            }
+
+            .bg_about_funding_rate{
+                background-image: url('./img/bg_about_funding_rate_m_l.svg');
             }
         }
 

@@ -83,7 +83,7 @@ const ProfitCalculator = ({token}) => {
             <div className={`f_r_r gap-3 w_100 f_r_section_item_content_nb profit_calculator_days`}>
                 <div className={`f_r_c estimated_pnl r_6`}>
                     <span className={`txt`}>{`Estimated pnl`}</span>
-                    <span className={`c_green m_l_5`}>{`21%`}</span>
+                    <span className={`c_green m_l_5`}>{`244.46 USDC`}</span>
                 </div>
             </div>
         </div>

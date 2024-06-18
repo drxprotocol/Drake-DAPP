@@ -355,7 +355,9 @@ const EarnForm = ({token}) => {
         <div className={`f_c_l_c e_main_item`}>
             <div className={'f_c_l_c r_12 squircle_border t_section t_section_np trading_form_section trading_form e_main_item_content'}>
                 <div className={'f_r_b p_box w_100'}>
-                    <div className={'e_i_title b'}>{intl.get(`page.earn.vault.title`)}</div>
+                    <div className={'e_i_title b'}>
+                        {/* <span>{intl.get(`page.earn.vault.title`)}</span> */}
+                    </div>
                     <div className={'f_r_l cp'}>
                         <div className={'i_icon_24 i_dropdown'}></div>
                         <div className={'f_14 c_link m_l_8 cp'} onClick={()=>setShowEarnSteps(true)}>{intl.get(`page.earn.vault.form.steps`)}</div>
