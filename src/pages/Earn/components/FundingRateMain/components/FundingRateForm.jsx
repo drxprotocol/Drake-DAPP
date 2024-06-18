@@ -11,6 +11,7 @@ import ContractConfig from "../../../../../contract/ContractConfig";
 import {useContractCall} from "../../../../../components/ContractHooks";
 import {debounce} from "debounce";
 import BigNumber from "bignumber.js";
+import ConditionDisplay from "../../../../../components/ConditionDisplay";
 
 const FundingRateForm = () => {
     const intl = useIntl();
@@ -108,16 +109,16 @@ const FundingRateForm = () => {
 
 
     const [submitEnable, setSubmitEnable] = useState(false);
-    const [submitTxt, setSubmitTxt] = useState('Confirm');
+    const [submitTxt, setSubmitTxt] = useState(tab);
 
     const updateSubmitTxt = () => {
-        amountOverflow ? setSubmitTxt(`Insufficient Balance`) : setSubmitTxt(`Confirm`);
+        amountOverflow ? setSubmitTxt(`Insufficient Balance`) : setSubmitTxt(tab);
     };
 
     useEffect(() => {
         updateSubmitTxt();
         setSubmitEnable(amountChecked && !amountOverflow);
-    }, [amountChecked, amountOverflow]);
+    }, [amountChecked, amountOverflow, tab]);
 
     const onDeposit = () => {
         let _amount = txAmount.amountOnChain.value;
@@ -166,10 +167,10 @@ const FundingRateForm = () => {
                 </div>
             </div>
 
-            <div className={`f_c_l w_100 f_r_section_item_content_nb form_box`}>
+            <div className={`f_c_b w_100 f_r_section_item_content_nb form_box`}>
                 <div className={'f_c_l'}>
                     <div className={'f_r_b f_12'}>
-                        <div>{`Deposit asset`}</div>
+                        <div>{`${tab} asset`}</div>
                         <div className={'f_r_l'}>
                             <span className={'c_text'}>{`Available:`}</span>
                             <span className={'m_l_5'}>{`${maxAmount.amount.formativeValue} ${tab === 'Deposit' ? asset?.token?.name : asset?.token?.localName}`}</span>
@@ -204,15 +205,14 @@ const FundingRateForm = () => {
                     </div>
                 </div>
 
-                <div className={`f_r_l m_t_25`}>
-                    <div className={`i_icon_24 i_checkbox_checked`}></div>
-                    <div className={`c_text f_14 m_l_12`}>{`Automatically withdraw if funding rate becomes negative`}</div>
-                </div>
+                <div className={'f_c_l'}>
+                    <ConditionDisplay display={tab === 'Deposit'}>
+                        <div className={`f_r_l f_14 m_t_25 r_12 squircle_border c_text deposit_tips_box`}>{`1.Approve USDC for deposit | 2. Confirm deposit transaction`}</div>
+                    </ConditionDisplay>
 
-                <div className={`f_r_l f_14 m_t_25 r_12 squircle_border c_text deposit_tips_box`}>{`1.Approve USDC for deposit | 2. Confirm deposit transaction`}</div>
-
-                <div className={'f_c_c m_t_25'}>
-                    <button className="i_btn sub_btn_primary sub_btn_long_default" disabled={!submitEnable} onClick={() => {onSubmit()}}>{submitTxt}</button>
+                    <div className={'f_c_c m_t_25'}>
+                        <button className="i_btn sub_btn_primary sub_btn_long_default" disabled={!submitEnable} onClick={() => {onSubmit()}}>{submitTxt}</button>
+                    </div>
                 </div>
             </div>
         </div>

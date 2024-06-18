@@ -52,10 +52,15 @@
 
     "commons.component.left.menu.earn.items.group.overview.name": "OVERVIEW",
     "commons.component.left.menu.earn.items.group.overview.items.about_earn": "About earn",
-    "commons.component.left.menu.earn.items.group.earn.name": "EARN",
+    "commons.component.left.menu.earn.items.group.overview.items.liquidity_earn": "Liquidity earn",
+    "commons.component.left.menu.earn.items.group.overview.items.funding_rate_earn": "Funding rate earn",
+    "commons.component.left.menu.earn.items.group.earn.name": "LIQUIDITY VAULT",
+    "commons.component.left.menu.earn.items.group.earn.items.dusdc_vault": "dUSDC Vault",
     "commons.component.left.menu.earn.items.group.earn.items.dusdt_vault": "dUSDT Vault",
     "commons.component.left.menu.earn.items.group.earn.items.dweth_vault": "dWETH Vault",
     "commons.component.left.menu.earn.items.group.earn.items.dwbtc_vault": "dWBTC Vault",
+    "commons.component.left.menu.earn.items.group.funding_rate_vault.name": "FUNDING RATE VAULT",
+    "commons.component.left.menu.earn.items.group.funding_rate_vault.items.iusdc_vault": "iUSDC Vault",
 
     "commons.component.left.menu.staking.items.group.overview.name": "OVERVIEW",
     "commons.component.left.menu.staking.items.group.overview.items.about_staking": "About staking",
@@ -208,7 +213,7 @@
     "page.trading.trading_list.assets.repay": "Repay",
 
 
-    "page.earn.overview.title": "About earn",
+    "page.earn.overview.title": "Liquidity earn",
 
 
     "page.earn.vault.title": "Earn",
@@ -222,6 +227,7 @@
 
     "page.earn.vault.steps.title": "Earn steps",
     "page.earn.vault.steps.step1.title": "Step 1: Obtain dVault settlement asset, such as USDT or WETH.",
+    "page.earn.vault.steps.step1.title_usdc": "Step 1: Obtain dVault settlement asset, such as USDC or WETH.",
     "page.earn.vault.steps.step1.content": "Please purchase the settlement asset or deposit it from another wallet.",
     "page.earn.vault.steps.step2.title": "Step 2: Deposit or Lock the asset.",
     "page.earn.vault.steps.step2.content": "Deposit or lock the settlement asset into the dVault to receive dAsset tokens and earn protocol income, including protocol fees and trader's profit and loss (pnl).",

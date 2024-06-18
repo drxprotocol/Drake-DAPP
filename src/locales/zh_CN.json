@@ -52,10 +52,15 @@
 
     "commons.component.left.menu.earn.items.group.overview.name": "概览",
     "commons.component.left.menu.earn.items.group.overview.items.about_earn": "关于“赚币”",
-    "commons.component.left.menu.earn.items.group.earn.name": "赚币",
+    "commons.component.left.menu.earn.items.group.overview.items.liquidity_earn": "Liquidity earn",
+    "commons.component.left.menu.earn.items.group.overview.items.funding_rate_earn": "Funding rate earn",
+    "commons.component.left.menu.earn.items.group.earn.name": "LIQUIDITY VAULT",
+    "commons.component.left.menu.earn.items.group.earn.items.dusdc_vault": "dUSDC 金库",
     "commons.component.left.menu.earn.items.group.earn.items.dusdt_vault": "dUSDT 金库",
     "commons.component.left.menu.earn.items.group.earn.items.dweth_vault": "dWETH 金库",
     "commons.component.left.menu.earn.items.group.earn.items.dwbtc_vault": "dWBTC 金库",
+    "commons.component.left.menu.earn.items.group.funding_rate_vault.name": "FUNDING RATE VAULT",
+    "commons.component.left.menu.earn.items.group.funding_rate_vault.items.iusdc_vault": "iUSDC Vault",
 
     "commons.component.left.menu.staking.items.group.overview.name": "概览",
     "commons.component.left.menu.staking.items.group.overview.items.about_staking": "关于“质押”",
@@ -208,7 +213,7 @@
     "page.trading.trading_list.assets.repay": "还债",
 
 
-    "page.earn.overview.title": "关于“赚币”",
+    "page.earn.overview.title": "Liquidity earn",
 
 
     "page.earn.vault.title": "赚币",
@@ -222,6 +227,7 @@
 
     "page.earn.vault.steps.title": "操作步骤",
     "page.earn.vault.steps.step1.title": "步骤1: 获取dVault相关结算资产，如USDT或WETH。",
+    "page.earn.vault.steps.step1.title_usdc": "步骤1: 获取dVault相关结算资产，如USDC或WETH。",
     "page.earn.vault.steps.step1.content": "购买结算资产或从其他钱包转入资产。",
     "page.earn.vault.steps.step2.title": "步骤2: 存入或者锁定资产。",
     "page.earn.vault.steps.step2.content": "将资产存入或锁定到dVault中，以接收dAsset代币并赚取协议收入，包括协议费用和交易者的损益(pnl)。",

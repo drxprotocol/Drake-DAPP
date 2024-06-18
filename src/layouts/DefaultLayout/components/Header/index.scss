@@ -65,6 +65,14 @@
             height: 24px;
         }
 
+        .coin_base_avatar_box{
+            .coin_base_avatar,
+            svg{
+                width: 24px !important;
+                height: 24px !important;
+            }
+        }
+
         .account {
             overflow: hidden;
             white-space: nowrap;

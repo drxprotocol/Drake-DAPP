@@ -1232,53 +1232,6 @@
             --squircle-corners: top-left top-right bottom-left bottom-right;
         }
 
-        .r_4,
-        .br_4 {
-            --squircle-radius: 4px;
-        }
-
-        .r_6,
-        .br_6 {
-            --squircle-radius: 6px;
-        }
-
-        .r_8,
-        .br_8,
-        .sub_btn_long,
-        .sub_btn_primary,
-        .sub_btn_outline_blue{
-            --squircle-radius: 8px;
-        }
-
-        .r_12,
-        .br_12,
-        .default_container,
-        .default_container_p,
-        .default_container_p_s{
-            --squircle-radius: 12px;
-        }
-
-        .r_16,
-        .br_16,
-        .brs_16 {
-            --squircle-radius: 16px;
-        }
-
-        .br_20,
-        .brs_20,
-        .r_20 {
-            --squircle-radius: 20px;
-        }
-
-        .br_24,
-        .brs_24,
-        .r_24 {
-            --squircle-radius: 24px;
-        }
-
-        .r_90 {
-            --squircle-radius: 90px;
-        }
 
         .squircle_border,
         .default_container,
@@ -1313,6 +1266,79 @@
         .sub_btn_outline_blue::after{
             --squircle-radius: 8px;
             background-color: #3b82f6;
+        }
+
+
+        .r_4,
+        .br_4,
+        .r_4::after,
+        .br_4::after{
+            --squircle-radius: 4px;
+        }
+
+        .r_6,
+        .br_6,
+        .r_6::after,
+        .br_6::after{
+            --squircle-radius: 6px;
+        }
+
+        .r_8,
+        .br_8,
+        .sub_btn_long,
+        .sub_btn_primary,
+        .sub_btn_outline_blue,
+        .r_8::after,
+        .br_8::after,
+        .sub_btn_long::after,
+        .sub_btn_primary::after,
+        .sub_btn_outline_blue::after{
+            --squircle-radius: 8px;
+        }
+
+        .r_12,
+        .br_12,
+        .default_container,
+        .default_container_p,
+        .default_container_p_s,
+        .r_12::after,
+        .br_12::after,
+        .default_container::after,
+        .default_container_p::after,
+        .default_container_p_s::after{
+            --squircle-radius: 12px;
+        }
+
+        .r_16,
+        .br_16,
+        .brs_16,
+        .r_16::after,
+        .br_16::after,
+        .brs_16::after{
+            --squircle-radius: 16px;
+        }
+
+        .br_20,
+        .brs_20,
+        .r_20,
+        .br_20::after,
+        .brs_20::after,
+        .r_20::after{
+            --squircle-radius: 20px;
+        }
+
+        .br_24,
+        .brs_24,
+        .r_24,
+        .br_24::after,
+        .brs_24::after,
+        .r_24::after{
+            --squircle-radius: 24px;
+        }
+
+        .r_90,
+        .r_90::after{
+            --squircle-radius: 90px;
         }
     }
 
@@ -1934,7 +1960,7 @@
     }
 }
 
-[data-rk] .iekbcc0.ju367v48 {
+[data-rk] .iekbcc0.ju367v4d {
     .ju367vs {
         border-width: 0px !important;
     }

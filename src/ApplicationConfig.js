@@ -11,6 +11,7 @@ const RPC_URL_Mapping = {
     RPCForArbitrumHardhatForkServerNet: 'https://fork-rpc.drx.exchange',
     RPCForArbitrumSepoliaTestNet: import.meta.env.VITE_RPC_ARBITRUM_SEPOLIA || 'https://sepolia-rollup.arbitrum.io/rpc',
     RPCForArbitrumSepoliaLocalForkNet: 'http://127.0.0.1:8545',
+    RPCForBaseSepoliaTestNet: import.meta.env.VITE_RPC_BASE_SEPOLIA || 'https://sepolia.base.org',
 };
 const provider = window.ethereum
     ? new ethers.providers.Web3Provider(window.ethereum)
@@ -28,11 +29,16 @@ const defaultMulticall3ContractOnArbitrumSepolia = {
     address: '0xCAF26D128313f9B916417BABaca905534aEfd9ba',
     blockCreated: 2997784,
 };
+const defaultMulticall3ContractOnBaseSepolia = {
+    address: '0xcA11bde05977b3631167028862bE2a173976CA11',
+    blockCreated: 1059647,
+};
 
 export default {
     provider,
 
     enableAAWallet: true,
+    enableCoinbaseAAWallet: false,
 
     RPCForArbitrumMainnet: RPC_URL_Mapping.RPCForArbitrumMainnet,
     RPCForArbitrumMainnetLocalForkNet: RPC_URL_Mapping.RPCForArbitrumMainnetLocalForkNet,
@@ -43,6 +49,7 @@ export default {
     RPCForArbitrumHardhatForkServerNet: RPC_URL_Mapping.RPCForArbitrumHardhatForkServerNet,
     RPCForArbitrumSepoliaTestNet: RPC_URL_Mapping.RPCForArbitrumSepoliaTestNet,
     RPCForArbitrumSepoliaLocalForkNet: RPC_URL_Mapping.RPCForArbitrumSepoliaLocalForkNet,
+    RPCForBaseSepoliaTestNet: RPC_URL_Mapping.RPCForBaseSepoliaTestNet,
 
     defaultChain: {
         id: 42161,
@@ -215,6 +222,25 @@ export default {
         blockExplorerUrl: 'https://sepolia.arbiscan.io',
         nativeCurrency: {
             name: 'Arbitrum ETH',
+            symbol: 'ETH',
+            decimals: 18,
+        },
+    },
+    chainConfigForBaseSepoliaTestNet: {
+        chainId: 84532,
+        chainName: 'Base Sepolia',
+        isTestChain: true,
+        isLocalChain: false,
+        multicallAddress: '0x1b39523b4016f8898EE41aC1a6B2BD7186C6cdAE',
+        multicall2Address: '0xF82D64357D9120a760e1E4C75f646C0618eFc2F3',
+        multicall3: defaultMulticall3ContractOnBaseSepolia,
+        getExplorerAddressLink: (address) => `https://sepolia.basescan.org/address/${address}`,
+        getExplorerTransactionLink: (transactionHash) => `https://sepolia.basescan.org/tx/${transactionHash}`,
+        // Optional parameters:
+        rpcUrl: RPC_URL_Mapping.RPCForBaseSepoliaTestNet,
+        blockExplorerUrl: 'https://sepolia.basescan.org',
+        nativeCurrency: {
+            name: 'Base ETH',
             symbol: 'ETH',
             decimals: 18,
         },

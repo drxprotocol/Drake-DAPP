@@ -2,7 +2,7 @@ import './index.scss';
 
 import React, { useCallback, useEffect, useState } from 'react';
 import useHeaderVO from './HeaderVO';
-import {AccountAddress, WalletConnect} from './components/WalletConnect';
+import {AccountAddress, WalletConnect} from './components/CoinbaseWalletConnect';
 import { useContext } from 'react';
 import PageInfoContext from '../../../../components/PageInfoProvider/PageInfoContext';
 import { Link } from 'react-router-dom';

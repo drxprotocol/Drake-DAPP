@@ -34,6 +34,7 @@
         .h_f_icon{
             width: 52px;
             height: 52px;
+            background-repeat: no-repeat;
         }
 
         .i_f_icon_up {
@@ -63,7 +64,7 @@
     }
 
     .f_r_section_item_l{
-        height: 370px;
+        height: 350px;
     }
 
     .f_r_section_item_s{
@@ -153,6 +154,10 @@
             padding-bottom: 0px;
         }
 
+        .form_box{
+            height: 300px;
+        }
+
         .deposit_tips_box{
             padding: 8px;
             background-color: #171d30;
@@ -196,9 +201,105 @@
                 border: 1px solid #eff6ff;
             }
         }
+
+        .estimated_pnl{
+            width: 100%;
+            padding: 4px 8px;
+            background-color: #052e16;
+            color: #ffffff;
+            font-size: 14px;
+            text-transform: uppercase;
+
+            .txt{
+                font-style: italic;
+            }
+        }
     }
 
     .your_stats{
 
+    }
+}
+
+.theme_light {
+    .f_r_main_section {
+        .how_it_works_box,
+        .f_r_section_item{
+            background: #f1f5f9;
+
+            .h_i_w_content_box{
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            .h_title{
+                color: #010207;
+            }
+
+            .h_flow_text{
+                color: #010207;
+            }
+        }
+
+        .f_r_section_item_content{
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+
+        .f_r_s_bg{
+            background-color: #e2e8f0;
+        }
+
+        .f_r_title{
+            color: #010207;
+        }
+
+        .f_r_s_title{
+            color: #64748b;
+        }
+
+
+        .funding_fee_stats{
+            .s_item{
+                color: #010207;
+                border-bottom: 1px solid #cbd5e1;
+            }
+        }
+
+
+
+        .funding_rate_form{
+            .deposit_tips_box{
+                background-color: #eff6ff;
+            }
+        }
+
+        .profit_calculator{
+            .day_option_item{
+                background-color: #e2e8f0;
+                color: #64748b;
+            }
+
+            .day_option_item.active{
+                background-color: #cbd5e1;
+                color: #010207;
+            }
+
+            @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+                .day_option_item.active.squircle_border::after{
+                    background: #171d30;
+                }
+            }
+
+            @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+                .day_option_item.active.squircle_border::after{
+                    border: 1px solid #171d30;
+                }
+            }
+
+            .estimated_pnl{
+                background-color: #f0fdf4;
+                color: #010207;
+            }
+        }
     }
 }

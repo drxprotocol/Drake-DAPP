@@ -3,6 +3,7 @@ import { useEthers, useEtherBalance } from '@usedapp/core';
 import WebThreeContext from '../../../../../components/WebThreeProvider/WebThreeContext';
 import ConditionDisplay from '../../../../../components/ConditionDisplay';
 import Jazzicon, { jsNumberForAddress } from 'react-jazzicon';
+import { Avatar, useName } from '@coinbase/onchainkit/identity';
 import CopyAddress from '../../../../../components/CopyAddress';
 import ViewOnEtherscan from '../../../../../components/ViewOnEtherscan';
 import ContractConfig from '../../../../../contract/ContractConfig';
@@ -20,14 +21,38 @@ import {getToken} from "../../../../../contract/TokenContract";
 import {useIntl} from "../../../../../components/i18n";
 import TokenBalancesDialog from "../../../../../components/Modals/TokenBalancesDialog";
 import {Popover} from "antd";
-import {useDisconnect, useAccount} from 'wagmi';
+import {useDisconnect} from 'wagmi';
 import {DefaultChain} from "../../../../../contract/ChainConfig";
 import RecentTransactionContext from "../../../../../components/RecentTransactionProvider/RecentTransactionContext";
 import {saveToLocalStorage} from "../../../../../utils/LocalStorage";
 import {RECENT_TRANSACTIONS_CACHE_KEY} from "../../../../../components/RecentTransactionProvider/RecentTransactionProvider";
 import BigNumber from "bignumber.js";
-import GuardianSettingDialog from "../../../../../components/Modals/GuardianSettingDialog";
-import {useKernelAccountRecovery} from "@zerodev/recovery";
+
+const CoinbaseAvatar = () => {
+    const web3Context = useContext(WebThreeContext);
+    const { data: name, isLoading } = useName({ address: web3Context.account });
+
+    useEffect(() => {
+        console.debug(
+            `CoinbaseAvatar:`,
+            `isLoading`, isLoading,
+            `name`, name,
+        )
+    }, [name, isLoading]);
+
+    return (
+        !isLoading && name ? (<div className={`coin_base_avatar_box`}>
+            <Avatar address={web3Context.account} className={'coin_base_avatar'} showAttestation  />
+        </div>) : <Jazzicon diameter={24} seed={jsNumberForAddress(web3Context.account)} />
+    );
+};
+
+const AvatarRender = () => {
+    const web3Context = useContext(WebThreeContext);
+    return (
+        web3Context?.connectorName === WalletMap.Coinbase.name ? <CoinbaseAvatar/> : <Jazzicon diameter={24} seed={jsNumberForAddress(web3Context.account)} />
+    );
+};
 
 export const AccountAddress = ({isAAWallet = false, recoveryEnabled = false, accountIcon = 'address', onDisconnect}) => {
     const web3Context = useContext(WebThreeContext);
@@ -62,7 +87,7 @@ export const AccountAddress = ({isAAWallet = false, recoveryEnabled = false, acc
         <div className={'f_r_b account_change_box'}>
             <div className={'f_r_l'}>
                 {
-                    accountIcon === 'address' ?  <Jazzicon diameter={24} seed={jsNumberForAddress(web3Context.account)} /> : <div className={`i_icon_24 ${walletIcon} m_r_5`}></div>
+                    accountIcon === 'address' ?  <AvatarRender /> : <div className={`i_icon_24 ${walletIcon} m_r_5`}></div>
                 }
 
                 <div className={'f_16 c_high_light b address'}>{web3Context.summaryAccount}</div>
@@ -126,7 +151,7 @@ const Transactions = ({className = '', onClose}) => {
 
 
     const clearRecentTransaction = () => {
-        saveToLocalStorage(`${RECENT_TRANSACTIONS_CACHE_KEY}_${web3Context?.account}_${web3Context?.chainId}`, []);
+        saveToLocalStorage(`${RECENT_TRANSACTIONS_CACHE_KEY}_${web3Context?.account}`, []);
         recentTransactionContext.dispatch([], []);
     };
 
@@ -170,25 +195,6 @@ const Transactions = ({className = '', onClose}) => {
 };
 
 
-export const GuardianSetting = ({recoveryEnabled = false, onGuardianSetting}) => {
-    const onSettingClick = () => {
-        onGuardianSetting && onGuardianSetting();
-    };
-
-    return (
-        <div className={'f_r_b c_p_12 bg_container r_12 m_t_15 cp'} onClick={onSettingClick}>
-            <div className={'f_r_l'}>
-                <div className={'i_icon_24 i_gudardian'}></div>
-                <div className={`f_c_l m_l_10`}>
-                    <div className={'f_14'}>{`Guardian Setting`}</div>
-                    <div className={`f_12 c_mark`}>{recoveryEnabled ? `Account recoverable. Click on recover icon` : `It helps recover account`}</div>
-                </div>
-            </div>
-
-            <div className={'i_icon_24 i_arrow_right_gray'}></div>
-        </div>
-    );
-};
 
 
 export const AccountDetail = ({className = '', onClose}) => {
@@ -217,23 +223,6 @@ export const AccountDetail = ({className = '', onClose}) => {
 
 
 
-    const { recoveryEnabled, guardians } = useKernelAccountRecovery({
-        chainId: web3Context?.chainId,
-        address: web3Context?.account,
-    });
-    useEffect(() => {
-        console.debug(
-            `useKernelAccountRecovery:`,
-            `recoveryEnabled =>`, recoveryEnabled,
-            `guardians =>`, guardians,
-        );
-    }, [recoveryEnabled, guardians]);
-
-    const [showGuardianSetting, setShowGuardianSetting] = useState(false);
-    const onShowGuardianSetting = () => {
-        setShowGuardianSetting && setShowGuardianSetting(true);
-        onClose && onClose();
-    };
 
     const [showTransactions, setShowTransactions] = useState(false);
 
@@ -241,12 +230,8 @@ export const AccountDetail = ({className = '', onClose}) => {
         <>
             <ConditionDisplay display={!showTransactions}>
                 <div className={`f_c_l default_container_p_s ${className}`}>
-                    <AccountAddress isAAWallet={isAAWallet} recoveryEnabled={recoveryEnabled} onDisconnect={onClose}/>
+                    <AccountAddress isAAWallet={isAAWallet} onDisconnect={onClose}/>
 
-                    <ConditionDisplay display={isAAWallet}>
-                        <GuardianSetting recoveryEnabled={recoveryEnabled} onGuardianSetting={onShowGuardianSetting}/>
-                        <GuardianSettingDialog guardians={guardians} recoveryEnabled={recoveryEnabled} isOpen={showGuardianSetting} onClose={() => {setShowGuardianSetting(false)}} />
-                    </ConditionDisplay>
 
 
                     <div className={'f_r_b_t m_t_15'}>
@@ -284,8 +269,6 @@ export const AccountDetail = ({className = '', onClose}) => {
 export const WalletConnect = ({size = 'large'}) => {
     const { deactivate, error, switchNetwork } = useEthers();
     const web3Context = useContext(WebThreeContext);
-    const recentTransactionContext = useContext(RecentTransactionContext);
-
     const [isOpenSwitchNetwork, setOpenSwitchNetwork] = useState(false);
     const [isOpenNoProvider, setOpenNoProvider] = useState(false);
     const [isOpenAccount, setOpenAccount] = useState(false);
@@ -315,14 +298,7 @@ export const WalletConnect = ({size = 'large'}) => {
     }, [ethAmount]);
 
 
-    const {chain: activeChain} = useAccount();
-
-
     const handleOpenChange = (show) => {
-        if(show){
-            recentTransactionContext.dispatch(undefined, undefined, true);
-        }
-
         setOpenAccount(show);
     };
     const onAccountPopupClose = () => {
@@ -362,17 +338,6 @@ export const WalletConnect = ({size = 'large'}) => {
     }, [error]);
 
 
-    useEffect(() => {
-        console.debug(`activeChain:`, activeChain);
-
-        if(activeChain){
-            if (activeChain?.unsupported) {
-                setOpenSwitchNetwork(true);
-            } else {
-                setOpenSwitchNetwork(false);
-            }
-        }
-    }, [activeChain]);
 
     return (
         <div className="f_r_l wallet_connect_btn_box">

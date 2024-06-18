@@ -20,7 +20,7 @@ const ProfitCalculator = ({token}) => {
         <div className={`f_c_l r_12 squircle_border f_r_section_item f_r_section_item_s trade_sections profit_calculator`}>
             <div className={`f_c_l w_100 f_r_section_item_content`}>
                 <div className={`f_r_l`}>
-                    <div className={`i_icon_24 i_pulse`}></div>
+                    <div className={`i_icon_24 i_pulse_new`}></div>
                     <div className={`b m_l_5 f_r_title`}>{`Estimated Profit Calculator`}</div>
                 </div>
 
@@ -81,10 +81,10 @@ const ProfitCalculator = ({token}) => {
             </div>
 
             <div className={`f_r_r gap-3 w_100 f_r_section_item_content_nb profit_calculator_days`}>
-                <div className={`r_12 squircle_border day_option_item active`}>{`7D`}</div>
-                <div className={`r_12 squircle_border day_option_item`}>{`30D`}</div>
-                <div className={`r_12 squircle_border day_option_item`}>{`90D`}</div>
-                <div className={`r_12 squircle_border day_option_item`}>{`ALL`}</div>
+                <div className={`f_r_c estimated_pnl r_6`}>
+                    <span className={`txt`}>{`Estimated pnl`}</span>
+                    <span className={`c_green m_l_5`}>{`21%`}</span>
+                </div>
             </div>
         </div>
     );

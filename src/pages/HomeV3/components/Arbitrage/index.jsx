@@ -3,7 +3,7 @@ import React, { useMemo, useEffect } from 'react';
 import './index.scss';
 import {useIntl} from "../../../../components/i18n";
 import bg_arbitrage_des from "./img/bg_arbitrage_des.svg";
-import bg_arbitrage_des_mobile from "./img/bg_arbitrage_des_mobile.svg";
+import bg_arbitrage_des_mobile from "./img/bg_arbitrage_des_mobile.png";
 
 const Arbitrage = () => {
     const intl = useIntl();

@@ -209,4 +209,38 @@
             background-image: linear-gradient(90deg, #e2e8f0 25%, #f0f0f0 37%, #e2e8f0 63%);
         }
     }
+
+
+
+    .dashboard_sections {
+        .d_h2 {
+            color: #1e293b;
+        }
+
+        .d_section{
+            background-color: #f1f5f9;
+        }
+
+
+        .d_table_item_empty{
+            color: #64748b;
+        }
+
+        .d_table_item,
+        .d_table_header_item{
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .d_table_header_item{
+            color: #64748b;
+        }
+
+        .d_table_item:hover{
+            background-color: #cbd5e1;
+        }
+
+        .d_loading_item.d_table_item:hover{
+            background-color: #f1f5f9;
+        }
+    }
 }

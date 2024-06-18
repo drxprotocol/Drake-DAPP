@@ -47,8 +47,8 @@ const Intro = () => {
                     </div>
                 </div>
 
-                <div className={`f_c_c_c i_features_box`}>
-                    <div className={'f_c_l section_s hp_section'}>
+                <div className={'f_c_l section_s hp_section'}>
+                    <div className={'f_c_l i_features_box r_16'}>
                         <div className={`f_r_b i_features_content`}>
                             <div>{`Maintain Full Custody Of Your Assets`}</div>
                             <div className={`i_icon_20 i_star_four m_l_8 m_r_8`}></div>

@@ -192,10 +192,10 @@
 
     .i_features_box{
         width: 100%;
-        padding: 24px 20px;
+        padding: 24px 32px;
         background: var(--c3, linear-gradient(90deg, #F0D162 0%, #EC7FDA 100%));
         color: #020617;
-        font-size: 18px;
+        font-size: 16px;
         font-family: 'SpaceGrotesk-Regular';
         overflow-x: auto;
 
@@ -217,22 +217,23 @@
 
         .bg_ui_demo{
             position: relative;
-            left: -720px;
+            left: -735px;
             z-index: -1;
             margin-left: 50%;
-            width: 1440px;
+            width: 1649px;
             height: 1076px;
 
             .pic{
-                width: 1440px;
+                width: 1649px;
                 height: 1076px;
-                max-width: 1440px;
+                max-width: 1649px;
             }
         }
 
         @media screen and (max-width: 1025px) {
             height: auto;
             margin-top: 40px;
+            padding: 0px;
 
             .bg_ui_demo{
                 left: 0px;
