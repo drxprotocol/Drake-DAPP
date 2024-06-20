@@ -146,6 +146,41 @@
         .tx_content{
             max-width: 250px;
         }
+
+        .referral_box{
+            width: 100%;
+
+            .split{
+                width: 100%;
+                margin: 15px 0;
+                border-top: 1px solid #1e293b;
+            }
+
+            .invite_content{
+                color: #ffffff;
+                font-size: 12px;
+            }
+
+            .invite_link_box{
+                padding: 8px;
+                background-color: #1e293b;
+                color: #64748b;
+                font-size: 12px;
+            }
+
+            .invite_link{
+                max-width: 234px;
+                white-space:nowrap;
+                overflow-x: hidden;
+            }
+
+            .copy_btn{
+                padding: 8px 12px;
+                background-color: #ffffff;
+                color: #020617;
+                font-size: 12px;
+            }
+        }
     }
 }
 
@@ -165,6 +200,30 @@
     .settings_view_pop {
         .settings_content_split{
             border-top: 1px solid #e2e8f0;
+        }
+    }
+
+    .account_view_pop {
+        .account_view_pop_content{
+            .referral_box{
+                .split{
+                    border-top: 1px solid #e2e8f0;
+                }
+
+                .invite_content{
+                    color: #010207;
+                }
+
+                .invite_link_box{
+                    background-color: #e2e8f0;
+                    color: #64748b;
+                }
+
+                .copy_btn{
+                    background-color: #475569;
+                    color: #f8fafa;
+                }
+            }
         }
     }
 }

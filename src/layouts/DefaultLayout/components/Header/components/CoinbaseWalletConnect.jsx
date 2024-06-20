@@ -20,13 +20,15 @@ import {TokenAmount} from "../../../../../utils/TokenAmountConverter";
 import {getToken} from "../../../../../contract/TokenContract";
 import {useIntl} from "../../../../../components/i18n";
 import TokenBalancesDialog from "../../../../../components/Modals/TokenBalancesDialog";
-import {Popover} from "antd";
+import {Popover, Tooltip} from "antd";
 import {useDisconnect} from 'wagmi';
 import {DefaultChain} from "../../../../../contract/ChainConfig";
 import RecentTransactionContext from "../../../../../components/RecentTransactionProvider/RecentTransactionContext";
 import {saveToLocalStorage} from "../../../../../utils/LocalStorage";
 import {RECENT_TRANSACTIONS_CACHE_KEY} from "../../../../../components/RecentTransactionProvider/RecentTransactionProvider";
 import BigNumber from "bignumber.js";
+import {useReferralCode} from "../../../../../hooks/usdUserInfo";
+import {CopyToClipboard} from "react-copy-to-clipboard";
 
 const CoinbaseAvatar = () => {
     const web3Context = useContext(WebThreeContext);
@@ -194,8 +196,61 @@ const Transactions = ({className = '', onClose}) => {
     );
 };
 
+const CopyReferralLink = ({ referralLink }) => {
+    const [copied, setIsCopied] = React.useState(false);
 
+    const copy = () => {
+        setIsCopied(true);
 
+        setTimeout(() => {
+            setIsCopied(false);
+        }, 3000);
+    };
+
+    return copied ? (
+        <Tooltip title="Copied!">
+            <div className={`r_8 cp copy_btn`}>{`Copy`}</div>
+        </Tooltip>
+    ) : (
+        <CopyToClipboard text={referralLink || ''} onCopy={copy}>
+            <div className={`r_8 cp copy_btn`}>{`Copy`}</div>
+        </CopyToClipboard>
+    );
+};
+
+const ReferralLink = () => {
+    const referralCode = useReferralCode();
+    const [referralLink, setReferralLink] = useState('');
+    useEffect(() => {
+        if(referralCode){
+            let host = window.location.origin;
+            let link = `${host}?referredCode=${referralCode}`;
+            setReferralLink(link);
+        }
+    }, [referralCode]);
+
+    return (
+        <ConditionDisplay display={referralCode}>
+            <div className={`f_c_l referral_box`}>
+                <div className={`split`}></div>
+
+                <div className={`f_r_b invite_content`}>
+                    <div className={``}>{`Referral link`}</div>
+                    <div className={`b c_link cp`}>{`Learn more`}</div>
+                </div>
+
+                <div className={`f_r_b r_12 m_t_15 invite_link_box`}>
+                    <div className={`f_r_l`}>
+                        <div className={`i_icon_24 i_global`}></div>
+                        <div className={`invite_link`}>{referralLink}</div>
+                    </div>
+
+                    <CopyReferralLink referralLink={referralLink}/>
+                </div>
+            </div>
+        </ConditionDisplay>
+    );
+};
 
 export const AccountDetail = ({className = '', onClose}) => {
     const intl = useIntl();
@@ -255,6 +310,8 @@ export const AccountDetail = ({className = '', onClose}) => {
 
                         <div className={'i_icon_24 i_arrow_right_gray'}></div>
                     </div>
+
+                    <ReferralLink/>
                 </div>
             </ConditionDisplay>
 

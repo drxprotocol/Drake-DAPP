@@ -63,7 +63,11 @@ export default defineConfig({
     },
     server: {
         proxy: {
-
+            '/drx-api': {
+                target: 'http://localhost:9027',
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/drx-api/, ''),
+            },
         },
         port: 9026,
         host: '0.0.0.0',
