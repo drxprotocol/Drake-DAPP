@@ -1,0 +1,303 @@
+/**
+ * @Author: DAPP
+ * @Date:   2021-07-08 11:29:10
+ * @Last Modified by:   DAPP
+ * @Last Modified time: 2021-07-09 12:17:06
+ */
+.transaction_dialog {
+    width: 525px;
+
+    .title_icon {
+        width: 40px;
+        height: 40px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        background-size: 100%;
+    }
+
+    .title_icon_confirm {
+        background-image: url('./img/icon_pop_confirm.svg');
+        //background-image: url("./img/Wallet.gif");
+        animation: loading 3s linear infinite;
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .title_icon_pending {
+        //background-image: url("./img/Approving.gif");
+        background-image: url('./img/icon_pop_pending.svg');
+    }
+
+    .title_icon_success {
+        background-image: url('./img/icon_pop_success.svg');
+        //background-image: url("./img/Success.gif");
+    }
+
+    .title_icon_failed {
+        background-image: url('./img/icon_pop_failed.svg');
+        //background-image: url("./img/Failed.gif");
+    }
+
+    .content_title {
+        color: #e2e8f0;
+        font-size: 18px;
+        font-family: 'Switzer-Semibold';
+        line-height: 24px;
+    }
+
+    .d_content {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+    }
+
+    .d_operation_box {
+        margin-top: 25px;
+        padding: 7px 12px;
+        background-color: #0f172a;
+    }
+
+    .d_hash_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .hash {
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .operations {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 10px;
+
+            .copy_address_box,
+            .view_on_etherscan_box {
+                padding: 7px 12px;
+                background-color: #1e293b;
+                border-radius: 8px;
+            }
+
+            .view_on_etherscan_box{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .d_confirm_box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .wallet {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .connection {
+            margin-left: 12px;
+
+            .wallet_name {
+                color: #404b51;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .wallet_add {
+                color: #e2e8f0;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        .status {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            margin-left: 10px;
+            background-color: #1e293b;
+
+            .dot {
+                width: 8px;
+                height: 8px;
+                background-color: #3b82f6;
+                border-radius: 4px;
+            }
+
+            .txt {
+                margin-left: 10px;
+                color: #f8fafc;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .d_error_box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 44px;
+        margin-top: 20px;
+        color: #df320c;
+        font-size: 14px;
+        line-height: 20px;
+        background-color: #ffe3e1;
+
+        .e_icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            background-image: url('./img/icon_pop_error_msg.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .e_msg {
+            max-width: 400px;
+            word-break: break-all;
+        }
+    }
+
+    .sub_btn_long_blue.close_btn,
+    .sub_btn_long_white.close_btn,
+    .sub_btn_long_red.close_btn {
+        width: 360px;
+        height: 42px;
+        margin-top: 24px;
+        padding: 0 40px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        background-color: #3b82f6;
+    }
+
+    .sub_btn_long_blue.close_btn {
+        @media screen and (max-width: 1280px) {
+            width: 100%;
+        }
+    }
+
+    .sub_btn_long_red.close_btn {
+        background-color: #3b82f6;
+    }
+
+    .sub_btn_long_white.close_btn {
+        color: #31c1bf;
+        border: 1px solid #31c1bf;
+        background-color: #fff;
+    }
+
+    .sub_btn_small_margin.close_btn {
+        margin-top: 12px;
+    }
+
+    .transaction_tips_box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 16px;
+        margin-top: 30px;
+        background-color: #f8fafc !important;
+        border: 1px solid #e7ecef;
+        color: #1b2022;
+        font-size: 14px;
+        line-height: 20px;
+
+        .tips_btn {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 6px 16px;
+            background-color: #31c1bf;
+            color: #fff;
+            font-size: 14px;
+            font-family: 'Switzer-Semibold';
+            line-height: 20px;
+        }
+    }
+}
+
+.theme_light{
+    .transaction_dialog {
+        .title_icon_confirm {
+            background-image: url('./img/icon_pop_confirm_l.svg');
+        }
+
+        .content_title {
+            color: #1e293b;
+        }
+
+        .d_content {
+            color: #64748b;
+        }
+
+        .d_operation_box {
+            background-color: #e2e8f0;
+        }
+
+        .d_hash_box {
+            .hash {
+                color: #64748b;
+            }
+
+            .operations {
+                .copy_address_box,
+                .view_on_etherscan_box {
+                    background-color: #e2e8f0;
+                }
+            }
+        }
+
+        .d_confirm_box {
+            .connection {
+                .wallet_name {
+                    color: #64748b;
+                }
+
+                .wallet_add {
+                    color: #1e293b;
+                }
+            }
+
+            .status {
+                background-color: #e2e8f0;
+
+                .dot {
+                    background-color: #3b82f6;
+                }
+
+                .txt {
+                    color: #1e293b;
+                }
+            }
+        }
+    }
+}

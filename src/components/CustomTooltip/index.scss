@@ -1,0 +1,20 @@
+.tooltip_popup_wrapper {
+    background: #1b2022;
+    /* DashBoard/Chart Shadow Style */
+
+    box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
+    padding: 8px 10px;
+    line-height: 20px;
+
+    .tooltip_content {
+        display: flex;
+        align-items: center;
+    }
+    .dashed-divider {
+        width: 100%;
+        height: 1px;
+        /* border: 1px dashed; */
+        border: 1px dashed #707e85;
+        margin: 8px 0;
+    }
+}

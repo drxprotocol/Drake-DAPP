@@ -2,7 +2,7 @@ import './index.scss';
 
 import React, {useContext, useState, useEffect} from 'react';
 import WebThreeContext from "../../../../components/WebThreeProvider/WebThreeContext";
-import {VaultToken} from "../../../../components/StakingStructure";
+import {FundingRateVaultToken} from "../../../../components/StakingStructure";
 import {buildToken} from "../../../../hooks/useTrdingMeta";
 import {DefaultChain} from "../../../../contract/ChainConfig";
 import {getQueryString} from "../../../../utils/URLUtil";
@@ -12,22 +12,21 @@ import FundingRateStats from "./components/FundingRateStats";
 import FundingRateForm from "./components/FundingRateForm";
 import ProfitCalculator from "./components/ProfitCalculator";
 import YourStats from "./components/YourStats";
+import FundingRateList from "./components/FundingRateList";
 
 const FundingRateMain = () => {
     const intl = useIntl();
 
     const web3Context = useContext(WebThreeContext);
-    const [token, setToken] = useState(new VaultToken({name: 'USDT'}));
+    const [token, setToken] = useState(new FundingRateVaultToken({name: 'USDC'}));
     useEffect(() => {
-        if(!web3Context?.account){
-            let vaultTokenName = getQueryString('vault') || 'USDT';
-            let _token = buildToken(vaultTokenName, DefaultChain.chainId);
-            _token = new VaultToken({
-                name: _token.name,
-                logoURI: _token.logoURI
-            });
-            setToken(_token);
-        }
+        let vaultTokenName = getQueryString('vault') || 'USDC';
+        let _token = buildToken(vaultTokenName, web3Context?.account ? web3Context?.chainId : DefaultChain.chainId);
+        _token = new FundingRateVaultToken(_token);
+
+        console.debug(`fundingRateVaultToken =>`, _token);
+
+        setToken(_token);
     }, [web3Context?.account]);
 
     const onVaultTokenChange = (vaultToken) => {
@@ -45,13 +44,18 @@ const FundingRateMain = () => {
             <HowItWorks/>
 
             <div className={'f_r_b_w w_100 m_t_20'}>
-                <FundingRateStats/>
-                <FundingRateForm/>
+                <FundingRateStats token={token}/>
+                <FundingRateForm token={token}/>
             </div>
 
             <div className={'f_r_b_w w_100 m_t_20'}>
+                {/*
                 <ProfitCalculator/>
-                <YourStats/>
+                */}
+            </div>
+
+            <div className={'f_r_b_w w_100'}>
+                <FundingRateList token={token}/>
             </div>
         </div>
     );

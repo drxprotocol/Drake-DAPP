@@ -1,0 +1,97 @@
+.coin_icon,
+.coin_icon_16,
+.coin_icon_20,
+.coin_icon_24,
+.coin_icon_40,
+.coin_icon_65,
+.coin_icon_84 {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.coin_icon_16 {
+    width: 16px;
+    height: 16px;
+}
+
+.coin_icon_20 {
+    width: 20px;
+    height: 20px;
+}
+
+.coin_icon_24 {
+    width: 24px;
+    height: 24px;
+}
+
+.coin_icon_40 {
+    width: 40px;
+    height: 40px;
+}
+
+.coin_icon_65 {
+    width: 65px;
+    height: 65px;
+}
+
+.coin_icon_84 {
+    width: 84px;
+    height: 84px;
+}
+
+.coin_icon_eth {
+    background-image: url('./img/token_eth.svg');
+}
+
+.coin_icon_eth_b {
+    background-image: url('./img/token_eth_b.svg');
+}
+
+.coin_icon_btc_b {
+    background-image: url('./img/token_btc.svg');
+}
+
+.coin_icon_link_b {
+    background-image: url('./img/token_link.svg');
+}
+
+.coin_icon_rune_b {
+    background-image: url('./img/token_rune.svg');
+}
+
+.coin_icon_usd {
+    background-image: url('./img/token_usd.svg');
+}
+
+.coin_icon_group {
+    position: relative;
+    width: 64px;
+    height: 32px;
+
+    .coin_icon {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        margin-right: 0;
+    }
+
+    .coin_icon:nth-child(1) {
+        left: 0;
+        z-index: 1;
+    }
+
+    .coin_icon:nth-child(2) {
+        left: 20px;
+    }
+}
+
+.coin_icon_name {
+    margin-left: 10px;
+    color: #1b2022;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Switzer-Semibold';
+}

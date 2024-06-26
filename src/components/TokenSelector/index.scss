@@ -1,0 +1,104 @@
+.token_selector_modal {
+    .search_box {
+        background-color: #f8fafa;
+        border-color: #e4eaf0;
+        padding: 18px 12px;
+
+        .s_input {
+            padding: 0;
+            border: 0;
+            background-color: #f8fafa;
+            outline: none;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .token_list_box {
+        height: 250px;
+        overflow-y: auto;
+
+        .token_item {
+            margin-top: 25px;
+            cursor: pointer;
+        }
+
+        .token_item:first-child {
+            margin-top: 0;
+        }
+
+        .token_logo {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    .imported_label {
+        color: #2783b8;
+        width: 67px;
+        height: 24px;
+
+        background: #e2f5ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 6px;
+    }
+    .preloaded_label {
+        color: #09a57f;
+        width: 72px;
+        height: 24px;
+
+        /* Success/ Light */
+
+        background: #e4fff2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 6px;
+    }
+    .token_list_box::-webkit-scrollbar {
+        width: 10px;
+        height: 1px;
+    }
+    .token_list_box::-webkit-scrollbar-thumb {
+        background: #abb7bd;
+    }
+    .token_list_box::-webkit-scrollbar-track {
+        background: #e7ecef;
+    }
+
+    .note {
+        background-color: #f8fafa;
+    }
+    .risk_note {
+        background: #fffacf;
+        padding: 12px 20px;
+    }
+    .rotate {
+        animation: loading 3s linear infinite;
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.import_token_modal {
+    .asset_address_block {
+        padding: 8px 32px 14px 32px;
+    }
+    .c_p_8 {
+        padding: 0 8px;
+    }
+    .m_t_142 {
+        margin-top: 142px;
+    }
+    .w_200 {
+        width: 200px;
+    }
+}

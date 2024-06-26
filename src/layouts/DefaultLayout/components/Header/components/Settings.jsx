@@ -14,9 +14,6 @@ import WebThreeContext from "../../../../../components/WebThreeProvider/WebThree
 import ContractConfig from "../../../../../contract/ContractConfig";
 import {useConfiguredContractSend, useContractCalls} from "../../../../../components/ContractHooks";
 import ApplicationConfig from "../../../../../ApplicationConfig";
-import {Portfolio} from "../../../../../components/TradingStructure";
-import {PORTFOLIO_TYPE} from "../../../../../components/TradingConstant";
-import {usePositionsCounter} from "../../../../../pages/Trade/components/Portfolios/hooks/usePortfolio";
 
 const DemoTradingSetting = () => {
     const {switchNetwork} = useEthers();
@@ -96,20 +93,7 @@ const CMPRepayModeSetting = () => {
     }, [getCMPCallsResult]);
 
 
-    const portfolio = useMemo(() => {
-        let _portfolio = new Portfolio({
-            portfolioType: PORTFOLIO_TYPE.Cross,
-            address: cmpAddress,
-            instrument: null,
-        });
-        // console.debug(`portfolio =>`, _portfolio);
-        return _portfolio;
-    }, [cmpAddress]);
-    const positionsCount = usePositionsCounter(portfolio) || 0;
     const [enableBorrowModeSetting, setEnableBorrowModeSetting] = useState(false);
-    useEffect(() => {
-        setEnableBorrowModeSetting(web3Context.account && cmpAddress && cmpAddress !== ApplicationConfig.emptyContractAddress && positionsCount === 0);
-    }, [web3Context, cmpAddress, positionsCount]);
 
 
     const getCMPBorrowModeCalls = useMemo(() => {

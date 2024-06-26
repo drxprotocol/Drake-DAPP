@@ -1,0 +1,32 @@
+.left_nav_menus{
+    .l_m_item:hover {
+        color: #3b82f6;
+    }
+
+    .l_m_item_title,
+    .l_m_item_sub_title{
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    .l_m_item_sub_title{
+        font-size: 16px;
+    }
+
+    .active .l_m_item_sub_title{
+        color: #3b82f6;
+    }
+}
+
+.theme_light {
+    .left_nav_menus {
+        .l_m_item_title,
+        .l_m_item_sub_title {
+            color: #010207;
+        }
+
+        .active .l_m_item_sub_title {
+            color: #3b82f6;
+        }
+    }
+}

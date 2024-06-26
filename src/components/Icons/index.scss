@@ -1,0 +1,756 @@
+.i_icon,
+.i_icon_a,
+.i_icon_16,
+.i_icon_20,
+.i_icon_24,
+.i_icon_28,
+.i_icon_32,
+.i_icon_36,
+.i_icon_40,
+.i_icon_44,
+.i_icon_48,
+.i_icon_64,
+.i_icon_84 {
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.i_icon_a {
+    display: inline-block;
+}
+.i_icon_a_f {
+    display: flex;
+}
+
+.i_icon_16 {
+    width: 16px;
+    height: 16px;
+}
+
+.i_icon_20 {
+    width: 20px;
+    height: 20px;
+}
+
+.i_icon_24 {
+    width: 24px;
+    height: 24px;
+}
+.i_icon_28 {
+    width: 28px;
+    height: 28px;
+}
+
+.i_icon_32 {
+    width: 32px;
+    height: 32px;
+}
+.i_icon_36 {
+    width: 36px;
+    height: 36px;
+}
+.i_icon_40 {
+    width: 40px;
+    height: 40px;
+}
+.i_icon_44 {
+    width: 44px;
+    height: 44px;
+}
+
+.i_icon_48 {
+    width: 48px;
+    height: 48px;
+}
+.i_icon_64 {
+    width: 64px;
+    height: 64px;
+}
+.i_icon_84 {
+    width: 84px;
+    height: 84px;
+}
+
+.i_icon_button {
+    cursor: pointer;
+}
+
+.icon_website_logo,
+.icon_website_logo_gray{
+    width: 108px;
+    height: 30px;
+    background-image: url('./img/icon_website_logo.svg');
+}
+
+.icon_website_logo_gray {
+    background-image: url('./img/icon_website_logo_gray.svg');
+}
+
+.icon_website_logo_small{
+    width: 106px;
+    height: 30px;
+    background-image: url('./img/icon_website_logo_small.svg');
+}
+
+.i_external_link {
+    background-image: url('./img/i_external_link.svg');
+}
+
+.i_social_media_twitter {
+    background-image: url('./img/i_social_media_twitter.svg');
+}
+
+.i_social_media_telegram {
+    background-image: url('./img/i_social_media_telegram.svg');
+}
+
+.i_social_media_medium {
+    background-image: url('./img/i_social_media_medium.svg');
+}
+
+.i_social_media_gitHub {
+    background-image: url('./img/i_social_media_gitHub.svg');
+}
+
+.i_social_media_discord {
+    background-image: url('./img/i_social_media_discord.svg');
+}
+
+.i_social_media_warpcast {
+    background-image: url('./img/i_social_media_warpcast.svg');
+}
+
+.i_connect_wallet {
+    background-image: url('./img/i_connect_wallet.svg');
+}
+
+.i_settings {
+    background-image: url('./img/i_settings.svg');
+}
+
+.i_metamask{
+    background-image: url('./img/i_metamask.svg');
+}
+
+.i_metamask_1 {
+    background-image: url('./img/i_metamask_1.svg');
+}
+
+.i_walletconnect {
+    background-image: url('./img/i_walletconnect.png');
+}
+
+.i_okx_wallet {
+    background-image: url('./img/i_okx_wallet.png');
+}
+
+.i_wallet_metamask {
+    background-image: url('./img/i_wallet_metamask.svg');
+}
+
+.i_wallet_google{
+    background-image: url('./img/i_wallet_google.svg');
+}
+
+.i_wallet_github {
+    background-image: url('./img/i_wallet_github.svg');
+}
+
+.i_wallet_facebook {
+    background-image: url('./img/i_wallet_facebook.svg');
+}
+
+.i_wallet_discord {
+    background-image: url('./img/i_wallet_discord.svg');
+}
+
+.i_wallet_twitter {
+    background-image: url('./img/i_wallet_twitter.svg');
+}
+
+.i_wallet_coinbase {
+    background-image: url('./img/i_wallet_coinbase.svg');
+}
+
+.i_star_four {
+    background-image: url('./img/i_star_four.svg');
+}
+
+.i_sparkle {
+    background-image: url('./img/i_sparkle.svg');
+}
+
+.i_gas_pump {
+    background-image: url('./img/i_gas_pump.svg');
+}
+
+.i_settings_slider {
+    background-image: url('./img/i_settings_slider.svg');
+}
+
+.i_risk_manage {
+    background-image: url('./img/i_risk_manage.svg');
+}
+
+.i_hand_pointing {
+    background-image: url('./img/i_hand_pointing.svg');
+}
+
+.i_arrow_right {
+    background-image: url('./img/i_arrow_right.svg');
+}
+
+.i_arrow_right1 {
+    background-image: url('./img/i_arrow_right1.svg');
+}
+
+.i_arrow_right_blue {
+    background-image: url('./img/i_arrow_right_blue.svg');
+}
+
+.i_arrow_right_up {
+    background-image: url('./img/i_arrow_right_up.svg');
+}
+
+.i_arrow_right_up_w {
+    background-image: url('./img/i_arrow_right_up_w.svg');
+}
+
+.i_arrow_right_up_w1 {
+    background-image: url('./img/i_arrow_right_up_w1.svg');
+}
+
+.i_arrow_left_down {
+    background-image: url('./img/i_arrow_left_down.svg');
+}
+
+.i_arrow_down {
+    background-image: url('./img/i_arrow_down_w.svg');
+}
+
+.i_arrow_up {
+    background-image: url('./img/i_arrow_up.svg');
+}
+
+.i_arrow_down_g {
+    background-image: url('./img/i_arrow_down_g.svg');
+}
+
+.i_arrow_right_gray {
+    background-image: url('./img/i_arrow_right_gray.svg');
+}
+
+.i_arrow_left_gray {
+    background-image: url('./img/i_arrow_left_gray.svg');
+}
+
+.i_shutdown {
+    background-image: url('./img/i_shutdown.svg');
+}
+
+.i_close {
+    background-image: url('./img/i_close.svg');
+}
+
+.i_close_w {
+    background-image: url('./img/i_close_w.svg');
+}
+
+.i_theme_moon {
+    background-image: url('./img/i_theme_moon.svg');
+}
+
+.i_theme_light {
+    background-image: url('./img/i_theme_light.svg');
+}
+
+.i_global {
+    background-image: url('./img/i_global.svg');
+}
+
+.i_graph {
+    background-image: url('./img/i_graph.svg');
+}
+
+.i_demo_trading_disable,
+.i_demo_trading_enable{
+    width: 40px;
+    height: 24px;
+    background-image: url('./img/i_demo_trading_disable.svg');
+}
+
+.i_demo_trading_enable {
+    background-image: url('./img/i_demo_trading_enable.svg');
+}
+
+.i_demo_trading {
+    width: 98px;
+    height: 32px;
+    background-image: url('./img/i_demo_trading.svg');
+}
+
+.i_beta {
+    width: 42px;
+    height: 20px;
+    background-image: url('./img/i_beta.svg');
+}
+
+.i_convert {
+    background-image: url('./img/i_convert.svg');
+}
+
+.i_checked {
+    background-image: url('./img/i_checked.svg');
+}
+
+.i_checkbox {
+    background-image: url('./img/i_checkbox.svg');
+}
+
+.i_checkbox_checked {
+    background-image: url('./img/i_checkbox_checked.svg');
+}
+
+.i_menu_more {
+    background-image: url('./img/i_menu_more.svg');
+}
+
+.i_flashlight {
+    background-image: url('./img/i_flashlight.svg');
+}
+
+.i_flashlight_w {
+    background-image: url('./img/i_flashlight_w.svg');
+}
+
+.i_features {
+    background-image: url('./img/i_features.svg');
+}
+
+.i_theme {
+    background-image: url('./img/i_theme.svg');
+}
+
+.i_leverage {
+    background-image: url('./img/i_leverage.svg');
+}
+
+.i_edit {
+    background-image: url('./img/i_edit.svg');
+}
+
+.i_plus {
+    background-image: url('./img/i_plus.svg');
+}
+
+.i_search {
+    background-image: url('./img/i_search.svg');
+}
+
+.i_rocket {
+    background-image: url('./img/i_rocket.svg');
+}
+
+.i_tips_info {
+    background-image: url('./img/i_tips_info.svg');
+}
+
+.i_tips_info_blue {
+    background-image: url('./img/i_tips_info_blue.svg');
+}
+
+.i_tips_error {
+    background-image: url('./img/i_tips_error.svg');
+}
+
+.i_tips_warning {
+    background-image: url('./img/i_tips_warning.svg');
+}
+
+
+.i_trade_long {
+    background-image: url('./img/i_trade_long.svg');
+}
+
+.i_trade_long_g {
+    background-image: url('./img/i_trade_long_g.svg');
+}
+
+.i_trade_short {
+    background-image: url('./img/i_trade_short.svg');
+}
+
+.i_trade_short_g {
+    background-image: url('./img/i_trade_short_g.svg');
+}
+
+.i_trade_empty {
+    background-image: url('./img/i_trade_empty.svg');
+}
+
+.i_price_dai {
+    background-image: url('./img/i_price_dai.svg');
+}
+
+.i_price_usd {
+    background-image: url('./img/i_price_usd.svg');
+}
+
+.i_price_usdc {
+    background-image: url('./img/i_price_usdc.svg');
+}
+
+.i_price_usdt {
+    background-image: url('./img/i_price_usdt.svg');
+}
+
+.i_price_weth {
+    background-image: url('./img/i_price_weth.svg');
+}
+
+.i_price_wbtc {
+    background-image: url('./img/i_price_wbtc.svg');
+}
+
+.i_link_icon_money {
+    background-image: url('./img/i_link_icon_money.svg');
+}
+
+.i_link_icon_money_hover_box:hover .i_link_icon_money,
+.active .i_link_icon_money {
+    background-image: url('./img/i_link_icon_money_h.svg');
+}
+
+.i_link_icon_pulse,
+.i_pulse{
+    background-image: url('./img/i_link_icon_pulse.svg');
+}
+
+.i_link_icon_pulse_hover_box:hover .i_link_icon_pulse,
+.active .i_link_icon_pulse{
+    background-image: url('./img/i_link_icon_pulse_h.svg');
+}
+
+.i_link_icon_stack {
+    background-image: url('./img/i_link_icon_stack.svg');
+}
+
+.i_link_icon_stack_hover_box:hover .i_link_icon_stack,
+.active .i_link_icon_stack{
+    background-image: url('./img/i_link_icon_stack_h.svg');
+}
+
+.i_link_icon_bank_usdc {
+    background-image: url('./img/i_link_icon_bank_usdc.svg');
+}
+
+.i_link_icon_bank_usdc_hover_box:hover .i_link_icon_bank_usdc,
+.active .i_link_icon_bank_usdc {
+    background-image: url('./img/i_link_icon_bank_usdc_h.svg');
+}
+
+.i_link_icon_bank_usdt {
+    background-image: url('./img/i_link_icon_bank_usdt.svg');
+}
+
+.i_link_icon_bank_usdt_hover_box:hover .i_link_icon_bank_usdt,
+.active .i_link_icon_bank_usdt {
+    background-image: url('./img/i_link_icon_bank_usdt_h.svg');
+}
+
+.i_link_icon_bank_dai {
+    background-image: url('./img/i_link_icon_bank_dai.svg');
+}
+
+.i_link_icon_bank_dai_hover_box:hover .i_link_icon_bank_dai,
+.active .i_link_icon_bank_dai {
+    background-image: url('./img/i_link_icon_bank_dai_h.svg');
+}
+
+.i_link_icon_bank_weth {
+    background-image: url('./img/i_link_icon_bank_weth.svg');
+}
+
+.i_link_icon_bank_weth_hover_box:hover .i_link_icon_bank_weth,
+.active .i_link_icon_bank_weth {
+    background-image: url('./img/i_link_icon_bank_weth_h.svg');
+}
+
+.i_link_icon_bank_wbtc {
+    background-image: url('./img/i_link_icon_bank_wbtc.svg');
+}
+
+.i_link_icon_bank_wbtc_hover_box:hover .i_link_icon_bank_wbtc,
+.active .i_link_icon_bank_wbtc {
+    background-image: url('./img/i_link_icon_bank_wbtc_h.svg');
+}
+
+
+
+.i_link_icon_frv_usdc {
+    background-image: url('./img/i_link_icon_frv_usdc.svg');
+}
+
+.i_link_icon_frv_usdc_hover_box:hover .i_link_icon_frv_usdc,
+.active .i_link_icon_frv_usdc {
+    background-image: url('./img/i_link_icon_frv_usdc_h.svg');
+}
+
+
+
+.i_task {
+    background-image: url('./img/i_task.svg');
+}
+
+.i_pulse_new{
+    background-image: url('./img/i_pulse_new.svg');
+}
+
+.i_reports {
+    background-image: url('./img/i_reports.svg');
+}
+
+.i_dropdown {
+    background-image: url('./img/i_dropdown.svg');
+}
+
+.i_dropdown_w {
+    background-image: url('./img/i_dropdown_w.svg');
+}
+
+.i_calendar {
+    background-image: url('./img/i_calendar.svg');
+}
+
+.i_locked {
+    background-image: url('./img/i_locked.svg');
+}
+
+.i_unlocked {
+    background-image: url('./img/i_unlocked.svg');
+}
+
+.i_timer {
+    background-image: url('./img/i_timer.svg');
+}
+
+.i_gift {
+    background-image: url('./img/i_gift.svg');
+}
+
+.i_bulb {
+    background-image: url('./img/i_bulb.svg');
+}
+
+
+.i_rank_1 {
+    background-image: url('./img/i_rank_1.svg');
+}
+
+.i_rank_2 {
+    background-image: url('./img/i_rank_2.svg');
+}
+
+.i_rank_3 {
+    background-image: url('./img/i_rank_3.svg');
+}
+
+.i_arrow_down_s {
+    background-image: url('./img/i_arrow_down_s.svg');
+}
+
+.i_bulleted_list {
+    background-image: url('./img/i_bulleted_list.svg');
+}
+
+.i_gudardian {
+    background-image: url('./img/i_gudardian.svg');
+}
+
+.i_safe_lock {
+    background-image: url('./img/i_safe_lock.svg');
+}
+
+.i_aa_recovery {
+    background-image: url('./img/i_aa_recovery.svg');
+}
+
+.i_aa_recovery.disable {
+    opacity: 0.4;
+}
+
+.i_tx_state_pending {
+    background-image: url('./img/i_tx_state_pending.svg');
+    animation: loading 3s linear infinite;
+
+    @keyframes loading {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.i_tx_state_failed {
+    background-image: url('./img/i_tx_state_failed.svg');
+}
+
+.i_tx_state_success {
+    background-image: url('./img/i_tx_state_success.svg');
+}
+
+.theme_light{
+    .icon_website_logo{
+        background-image: url('./img/icon_website_logo_light.svg');
+    }
+
+    .i_external_link {
+        background-image: url('./img/i_external_link_l.svg');
+    }
+
+    .icon_website_logo_gray{
+        background-image: url('./img/icon_website_logo_gray_l.svg');
+    }
+
+    .i_convert {
+        background-image: url('./img/i_convert_l.svg');
+    }
+
+    .i_arrow_right_gray {
+        background-image: url('./img/i_arrow_right_gray_l.svg');
+    }
+
+    .i_arrow_left_gray {
+        background-image: url('./img/i_arrow_left_gray_l.svg');
+    }
+
+    .i_arrow_down {
+        background-image: url('./img/i_arrow_down_w_l.svg');
+    }
+
+    .i_settings {
+        background-image: url('./img/i_settings_b.svg');
+    }
+
+    .i_close {
+        background-image: url('./img/i_close_b.svg');
+    }
+
+    .i_close_w {
+        background-image: url('./img/i_close_w_l.svg');
+    }
+
+    .i_shutdown {
+        background-image: url('./img/i_shutdown_l.svg');
+    }
+
+    .i_theme_moon {
+        background-image: url('./img/i_theme_moon_l.svg');
+    }
+
+    .i_theme_light {
+        background-image: url('./img/i_theme_light_l.svg');
+    }
+
+    .i_global {
+        background-image: url('./img/i_global_l.svg');
+    }
+
+    .i_checked {
+        background-image: url('./img/i_checked_l.svg');
+    }
+
+    .i_bulleted_list {
+        background-image: url('./img/i_bulleted_list_l.svg');
+    }
+
+    .i_price_dai {
+        background-image: url('./img/i_price_dai_l.svg');
+    }
+
+    .i_price_usd {
+        background-image: url('./img/i_price_usd_l.svg');
+    }
+
+    .i_price_usdc {
+        background-image: url('./img/i_price_usdc_l.svg');
+    }
+
+    .i_price_usdt {
+        background-image: url('./img/i_price_usdt_l.svg');
+    }
+
+    .i_price_weth {
+        background-image: url('./img/i_price_weth_l.svg');
+    }
+
+    .i_price_wbtc {
+        background-image: url('./img/i_price_wbtc_l.svg');
+    }
+
+    .i_plus {
+        background-image: url('./img/i_plus_l.svg');
+    }
+
+    .i_search {
+        background-image: url('./img/i_search_l.svg');
+    }
+
+    .i_flashlight_w {
+        background-image: url('./img/i_flashlight_w_l.svg');
+    }
+
+    .i_demo_trading {
+        background-image: url('./img/i_demo_trading_l.svg');
+    }
+
+    .i_timer {
+        background-image: url('./img/i_timer_l.svg');
+    }
+
+    .i_locked {
+        background-image: url('./img/i_locked_l.svg');
+    }
+
+    .i_unlocked {
+        background-image: url('./img/i_unlocked_l.svg');
+    }
+
+    .i_bulb {
+        background-image: url('./img/i_bulb_l.svg');
+    }
+
+    .i_arrow_down_s {
+        background-image: url('./img/i_arrow_down_s_l.svg');
+    }
+
+    .i_aa_recovery {
+        background-image: url('./img/i_aa_recovery_l.svg');
+    }
+
+    .i_safe_lock {
+        background-image: url('./img/i_safe_lock_l.svg');
+    }
+
+    .i_dropdown_w {
+        background-image: url('./img/i_dropdown_w_l.svg');
+    }
+
+    .i_task {
+        background-image: url('./img/i_task_l.svg');
+    }
+
+    .i_reports {
+        background-image: url('./img/i_reports_l.svg');
+    }
+
+    .i_pulse_new{
+        background-image: url('./img/i_pulse_new_l.svg');
+    }
+
+    .i_arrow_right1 {
+        background-image: url('./img/i_arrow_right1_l.svg');
+    }
+}

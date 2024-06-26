@@ -1,0 +1,23 @@
+.earn_steps_dialog {
+    .content_short{
+        max-width: 300px;
+    }
+
+    .link{
+        padding: 4px 8px;
+        color: #3b82f6;
+        background-color: #1e293b;
+    }
+
+    @supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+        .link.squircle_border::after{
+            background-color: #3b82f6;
+        }
+    }
+
+    @supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+        .link.squircle_border{
+            border: 1px solid #3b82f6;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+/**
+ * @Author: DAPP
+ * @Date:   2021-09-03 22:18:51
+ * @Last Modified by:   DAPP
+ * @Last Modified time: 2021-09-16 22:45:04
+ */
+.view_on_etherscan_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+
+    .voe_txt {
+        margin-left: 8px;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 20px;
+
+        @media screen and (max-width: 769px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.default_container,
+.default_container_p,
+.bg_tag_hover,
+.bg_container,
+.overlay_container{
+    .voe_icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-image: url('./img/i_open.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+.theme_light {
+    .bg_container,
+    .bg_tag_hover,
+    .default_container,
+    .default_container_p,
+    .overlay_container{
+        .voe_icon {
+            background-image: url('./img/i_open_l.svg');
+        }
+    }
+
+    .voe_txt {
+        color: #64748b;
+    }
+}

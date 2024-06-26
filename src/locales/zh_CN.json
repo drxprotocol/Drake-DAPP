@@ -52,15 +52,15 @@
 
     "commons.component.left.menu.earn.items.group.overview.name": "概览",
     "commons.component.left.menu.earn.items.group.overview.items.about_earn": "关于“赚币”",
-    "commons.component.left.menu.earn.items.group.overview.items.liquidity_earn": "Liquidity earn",
-    "commons.component.left.menu.earn.items.group.overview.items.funding_rate_earn": "Funding rate earn",
+    "commons.component.left.menu.earn.items.group.overview.items.liquidity_earn": "Liquidity Earn",
+    "commons.component.left.menu.earn.items.group.overview.items.funding_rate_earn": "Funding Rate Earn",
     "commons.component.left.menu.earn.items.group.earn.name": "LIQUIDITY VAULT",
     "commons.component.left.menu.earn.items.group.earn.items.dusdc_vault": "dUSDC 金库",
     "commons.component.left.menu.earn.items.group.earn.items.dusdt_vault": "dUSDT 金库",
     "commons.component.left.menu.earn.items.group.earn.items.dweth_vault": "dWETH 金库",
     "commons.component.left.menu.earn.items.group.earn.items.dwbtc_vault": "dWBTC 金库",
     "commons.component.left.menu.earn.items.group.funding_rate_vault.name": "FUNDING RATE VAULT",
-    "commons.component.left.menu.earn.items.group.funding_rate_vault.items.iusdc_vault": "iUSDC Vault",
+    "commons.component.left.menu.earn.items.group.funding_rate_vault.items.frusdc_vault": "frUSDC Vault",
 
     "commons.component.left.menu.staking.items.group.overview.name": "概览",
     "commons.component.left.menu.staking.items.group.overview.items.about_staking": "关于“质押”",
@@ -213,10 +213,10 @@
     "page.trading.trading_list.assets.repay": "还债",
 
 
-    "page.earn.overview.title": "Liquidity earn",
+    "page.earn.overview.title": "Liquidity Earn",
 
 
-    "page.earn.vault.title": "赚币",
+    "page.earn.vault.title": "Liquidity Vault",
     "page.earn.vault.form.steps": "操作步骤",
     "page.earn.vault.form.amount": "存入数量",
     "page.earn.vault.form.available": "可用余额:",

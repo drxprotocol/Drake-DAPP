@@ -1,0 +1,112 @@
+.wallet_selector {
+    .pop_wallet_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .wallet_title {
+            width: 100%;
+            color: #e2e8f0;
+            font-size: 18px;
+            font-family: 'Switzer-Semibold';
+            line-height: 25px;
+        }
+
+        .wallet_title_s {
+            width: 100%;
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .wallet_checkbox,
+        .wallet_checkbox_checked {
+            width: 20px;
+            height: 20px;
+            margin-top: 5px;
+            margin-right: 12px;
+            background-image: url('./img/connect_checkbox.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .wallet_checkbox_checked {
+            background-image: url('./img/connect_checkbox_checked.svg');
+        }
+
+        .wallet_item {
+            width: 190px;
+            padding: 10px 15px;
+
+            .wallet_name {
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 15px;
+            }
+
+            .disconnect_box {
+                cursor: pointer;
+            }
+
+            .disconnect_dot {
+                width: 8px;
+                height: 8px;
+                background-color: #df320c;
+                border-radius: 4px;
+            }
+
+            .disconnect {
+                margin-left: 10px;
+                color: #df320c;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .pop_wallet_box.wallet_items_enable {
+        .wallet_item {
+            cursor: pointer;
+        }
+
+        .wallet_item:hover {
+            box-shadow: 0 10px 16px rgba(0, 0, 0, 0.05);
+        }
+        //.wallet_item_active{
+        //    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.05);
+        //}
+    }
+
+    .pop_wallet_box.wallet_items_disable {
+        .wallet_item {
+            background-color: #f8fafa;
+
+            .wallet_logo {
+                opacity: 0.5;
+            }
+
+            .wallet_name {
+                color: #c8cfd3;
+            }
+        }
+    }
+}
+
+.theme_light {
+    .wallet_selector{
+        .wallet_title {
+            color: #1e293b;
+        }
+
+        .wallet_title_s {
+            color: #64748b;
+        }
+
+        .wallet_item {
+            .wallet_name {
+                color: #1e293b;
+            }
+        }
+    }
+}

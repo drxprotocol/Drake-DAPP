@@ -1,0 +1,23 @@
+.token_widget_wrapper {
+    .rc-input-number-input {
+        text-align: end;
+        background-color: #f8fafa;
+    }
+}
+
+.wrapped_token_switch_box {
+    .token_item {
+        padding: 32px 24px;
+        cursor: pointer;
+    }
+
+    .token_item.active {
+        border-color: #31c1bf;
+    }
+}
+
+.number {
+    input {
+        width: 100%;
+    }
+}

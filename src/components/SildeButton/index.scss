@@ -1,0 +1,52 @@
+.silde-button-pc {
+    width: 340px;
+    height: 36px;
+    color: #1b2022;
+    background: #e7ecef;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px auto;
+    .active {
+        position: absolute;
+        height: 34px;
+        width: 170px;
+        background: white;
+        font-family: 'Switzer-Semibold';
+        text-align: center;
+        line-height: 34px;
+        transition: transform 0.5s;
+    }
+}
+
+.silde-button-mobile {
+    width: 260px;
+    height: 34px;
+    color: #1b2022;
+    background: #e7ecef;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px auto;
+    .active {
+        position: absolute;
+        height: 33px;
+        width: 135px;
+        background: white;
+        font-family: 'Switzer-Semibold';
+        text-align: center;
+        line-height: 34px;
+        transition: transform 0.5s;
+    }
+}
+
+.btn-item {
+    flex: 1;
+    text-align: center;
+}

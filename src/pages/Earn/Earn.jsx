@@ -1,4 +1,5 @@
-import '../Trade/index.scss';
+import './trading.scss';
+import './dataTable.scss';
 import './index.scss';
 
 import React, { useContext, useEffect, useMemo, useState } from 'react';

@@ -1,0 +1,48 @@
+.guardian_settings {
+    .trade_sections{
+        font-size: 12px;
+    }
+
+    .tips_bar_warning,
+    .tips_bar_error{
+        .tb_content{
+            max-width: 330px;
+        }
+    }
+
+    .g_icon{
+        margin: 25px 0;
+    }
+
+    .g_title{
+        color: #ffffff;
+    }
+
+    .g_c_account{
+        margin-top: 25px;
+        padding: 10px 12px;
+        background-color: #1e293b;
+        color: #64748b;
+        font-size: 14px;
+    }
+
+    .g_tips{
+        width: 100%;
+        margin: 25px 0;
+        padding: 8px 12px;
+        background-color: #171d30;
+    }
+}
+
+.theme_light {
+    .guardian_settings {
+        .g_c_account{
+            background-color: #e2e8f0;
+            color: #64748b;
+        }
+
+        .g_tips{
+            background-color: #eff6ff;
+        }
+    }
+}

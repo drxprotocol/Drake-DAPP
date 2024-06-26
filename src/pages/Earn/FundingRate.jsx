@@ -1,4 +1,5 @@
-import '../Trade/index.scss';
+import './trading.scss';
+import './dataTable.scss';
 import './index.scss';
 
 import React, { useContext, useEffect, useMemo, useState } from 'react';
@@ -9,7 +10,7 @@ import FundingRateMain from "./components/FundingRateMain";
 import {getQueryString} from "../../utils/URLUtil";
 
 const leftNavKeyMap = {
-    'USDC': 'iusdc_vault',
+    'USDC': 'frusdc_vault',
 };
 
 export const FundingRate = () => {

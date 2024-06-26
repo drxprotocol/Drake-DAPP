@@ -1,0 +1,30 @@
+.token_balances_window {
+    .tb_title{
+        width: 100%;
+        color: #e2e8f0;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .warning_tips{
+        padding: 8px;
+        margin: 16px 0;
+        background-color: #1e293b;
+    }
+
+    .token_item{
+        .test_flag{
+            vertical-align: super;
+            font-size: 10px;
+            margin-left: 3px;
+        }
+    }
+}
+
+.theme_light {
+    .token_balances_window {
+        .warning_tips{
+            background-color: #e2e8f0;
+        }
+    }
+}

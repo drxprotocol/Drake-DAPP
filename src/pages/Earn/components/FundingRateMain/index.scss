@@ -64,7 +64,11 @@
     }
 
     .f_r_section_item_l{
-        height: 350px;
+        height: 320px;
+    }
+
+    .f_r_section_item_ll{
+        width: 100%;
     }
 
     .f_r_section_item_s{
@@ -91,6 +95,10 @@
         font-size: 18px;
     }
 
+    .f_r_title_w{
+        width: 150px;
+    }
+
     .f_r_s_title{
         color: #64748b;
     }
@@ -99,7 +107,7 @@
         .s_item{
             padding: 6px 12px;
             color: #ffffff;
-            font-size: 14px;
+            font-size: 13px;
             border-bottom: 1px solid #334155;
         }
 
@@ -161,6 +169,22 @@
         .deposit_tips_box{
             padding: 8px;
             background-color: #171d30;
+
+            .index_box{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-left: 15px;
+                margin-right: 5px;
+                border-radius: 10px;
+                background-color: #334155;
+                color: #ffffff;
+                font-size: 10px;
+                text-align: center;
+            }
+            .index_box:first-child{
+                margin-left: 0px;
+            }
         }
     }
 
@@ -175,6 +199,10 @@
 
         .input_deposit_length{
             width: 132px;
+        }
+
+        .input_split{
+            width: 25px;
         }
 
 
@@ -202,11 +230,13 @@
             }
         }
 
+        .profit_calculator_days{
+            border-left: 1px solid #1e293b;
+        }
+
         .estimated_pnl{
-            width: 100%;
-            padding: 4px 8px;
-            background-color: #052e16;
-            color: #ffffff;
+            min-width: 315px;
+            color: #64748b;
             font-size: 14px;
             text-transform: uppercase;
 
@@ -216,8 +246,169 @@
         }
     }
 
-    .your_stats{
+    .my_staking_metrics_box{
+        padding: 35px 25px;
 
+        .m_s_m_item{
+            .c_text{
+                font-size: 16px;
+            }
+
+            .c_hl{
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 35px 16px;
+
+            .m_s_m_item{
+                width: 130px;
+
+                .c_text{
+                    font-size: 14px;
+                }
+
+                .c_hl{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .staking_list_box{
+        width: 100%;
+
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        }
+    }
+
+    .staking_record_item,
+    .redeem_record_item{
+        align-items: center;
+        padding: 10px 20px;
+
+        @media screen and (max-width: 768px) {
+            padding: 10px 13px;
+
+            .metric{
+                width: 130px;
+            }
+
+            .tag{
+                width: auto;
+                padding: 6px 12px;
+                background: var(--neutral-n-6, #1e293b);
+            }
+        }
+    }
+
+    .my_staking_table,
+    .my_redeem_table{
+        .staking_type{
+            width: 100px;
+        }
+
+        .staking_id{
+            width: 80px;
+            margin-left: 5px;
+        }
+
+        .staking_amount{
+            width: 100px;
+        }
+
+        .redeem_amount{
+            width: 150px;
+        }
+
+        .staking_deposited{
+            width: 100px;
+        }
+
+        .staking_release_time{
+            width: 100px;
+        }
+
+        .staking_lock_duration{
+            width: 100px;
+        }
+
+        .staking_rewards{
+            width: 120px;
+        }
+
+        .staking_operations{
+            width: 200px;
+        }
+
+        .redeem_request_operations{
+            width: 350px;
+        }
+    }
+
+    .my_staking_table{
+        .staking_type{
+            width: 100px;
+        }
+
+        .staking_id{
+            width: 50px;
+            margin-left: 5px;
+        }
+
+        .staking_amount{
+            width: 100px;
+        }
+
+        .redeem_amount{
+            width: 130px;
+        }
+
+        .staking_deposited{
+            width: 100px;
+        }
+
+        .staking_release_time{
+            width: 80px;
+        }
+
+        .staking_lock_duration{
+            width: 100px;
+        }
+
+        .staking_rewards{
+            width: 120px;
+        }
+
+        .staking_operations{
+            width: 270px;
+        }
+    }
+
+    .tag{
+        width: 100%;
+        padding: 6px 12px;
+        background-color: #1e293b;
+    }
+
+    .staking_list_btn{
+        padding: 12px 20px;
+        background-color: #f8fafc;
+        color: #1e293b;
+    }
+
+    .staking_list_btn.disable{
+        background-color: #1e293b;
+        color: #64748b;
+        cursor: not-allowed;
+    }
+
+    .days_left_tag{
+        padding: 12px 12px;
+        background-color: #1e293b;
+        color: #f8fafc;
     }
 }
 
@@ -281,6 +472,10 @@
                 color: #010207;
                 border-bottom: 1px solid #cbd5e1;
             }
+
+            .s_item:last-child{
+                border-bottom: 0px;
+            }
         }
 
 
@@ -288,6 +483,11 @@
         .funding_rate_form{
             .deposit_tips_box{
                 background-color: #eff6ff;
+
+                .index_box{
+                    background-color: #cbd5e1;
+                    color: #010207;
+                }
             }
         }
 
@@ -314,9 +514,44 @@
                 }
             }
 
+            .profit_calculator_days{
+                border-left: 1px solid #e2e8f0;
+            }
+
             .estimated_pnl{
-                background-color: #f0fdf4;
                 color: #010207;
+            }
+        }
+
+        .staking_list_btn{
+            background-color: #e2e8f0;
+            color: #1e293b;
+            @media screen and (max-width: 768px) {
+                background-color: #e2e8f0;
+            }
+        }
+
+        .staking_list_btn.disable{
+            background-color: #e2e8f0;
+            color: #64748b;
+            @media screen and (max-width: 768px) {
+                background-color: #e2e8f0;
+            }
+        }
+
+        .days_left_tag{
+            background-color: #e2e8f0;
+            color: #1e293b;
+        }
+
+        .staking_record_item,
+        .redeem_record_item{
+            color: #010207;
+
+            @media screen and (max-width: 768px) {
+                .tag{
+                    background: var(--neutral-n-6, #e2e8f0);
+                }
             }
         }
     }

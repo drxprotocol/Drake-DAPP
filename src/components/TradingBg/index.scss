@@ -1,0 +1,33 @@
+.trading_bg_section{
+    margin-bottom: 0px !important;
+
+    .trading_section_bg,
+    .trading_section_bg_r{
+        position: absolute;
+        top: 0px;
+        z-index: -1;
+        width: 1400px;
+        height: 1654px;
+        //background: #94a3b8;
+        //background: radial-gradient(rgba(92, 91, 195, 0.29) , rgba(2, 6, 23, 1) );
+        background-image: url('./img/trade_page_bg.svg');
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: 1280px) {
+            display: none;
+        }
+    }
+
+    .trading_section_bg_r{
+        left: 1400px;
+        transform: rotate(180deg);
+    }
+}
+
+.theme_light{
+    .trading_bg_section{
+        .trading_section_bg{
+            //transform: rotate(180deg);
+        }
+    }
+}

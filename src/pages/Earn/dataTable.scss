@@ -1,0 +1,324 @@
+.t_portfolios{
+    padding-top: 12px !important;
+
+    .t_p_header_box{
+        overflow-x: auto;
+
+        .t_p_header{
+            min-width: 500px;
+        }
+
+        .tab_item{
+            padding-bottom: 16px;
+            padding-top: 5px;
+        }
+
+        .portfolio_type_selector{
+            padding-bottom: 10px;
+        }
+    }
+    .t_p_header_box::-webkit-scrollbar {
+        display: none;
+    }
+
+    .t_p_header_portfolio_box{
+        margin: 16px 0;
+    }
+
+    .tag{
+        padding: 4px 8px;
+        background-color: #1e293b;
+    }
+
+    .tag_long_order{
+        background-color: #052e16;
+        color: #22C55E !important;
+    }
+
+    .tag_long_short{
+        background-color: #450A0A;
+        color: #ef4444 !important;
+    }
+
+    .portfolio_item{
+        width: 100%;
+        padding: 20px;
+        border-bottom: 1px solid #1e293b;
+
+        .metric{
+            width: 150px;
+
+            .c_hl,
+            .c_green,
+            .c_red{
+                margin-left: 5px;
+            }
+        }
+
+        .metric_l,
+        .metric_ll{
+            width: 180px;
+        }
+
+        @media screen and (max-width: 769px) {
+            padding: 20px 10px;
+
+            .metric{
+                width: 140px;
+                margin: 10px 0;
+            }
+
+            .metric_s {
+                width: 120px;
+            }
+
+            .metric_ss {
+                width: 80px;
+            }
+
+            .metric_l {
+                width: 160px;
+            }
+
+            .metric_ll{
+                width: 200px;
+            }
+
+            .metric_lll{
+                width: 100%;
+            }
+        }
+    }
+
+    .portfolio_item.position_item{
+        .metric{
+            width: 140px;
+        }
+
+        .metric_s{
+            width: 120px;
+        }
+
+        .metric_l{
+            width: 165px;
+        }
+
+        .metric_ll{
+            width: 220px;
+        }
+    }
+
+    .portfolio_item:last-child{
+        border-bottom: 0;
+    }
+
+    .portfolio_item_empty{
+        width: 100%;
+        min-height: 302px;
+        padding: 40px;
+        color: #64748b;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .order_item,
+    .order_table_header_item{
+        width: 100%;
+        padding: 20px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .order_table_header_item{
+        color: #64748b;
+        padding-bottom: 10px;
+    }
+
+    .order_item:hover{
+        background-color: #334155;
+    }
+
+    .loading_order_item.order_item:hover{
+        background-color: #0f172a;
+    }
+
+    .order_info_item{
+        width: 126px;
+
+    }
+
+    // pending orders table
+    .order_symbol{
+        width: 165px;
+    }
+
+    .order_order_time{
+        width: 90px;
+    }
+
+    .order_amount{
+        width: 80px;
+    }
+
+    .order_order_price{
+        width: 90px;
+    }
+
+    .order_order_value{
+        width: 100px;
+    }
+
+    .order_status{
+        width: 80px;
+    }
+
+    .order_type{
+        width: 60px;
+    }
+
+    .order_btn{
+        width: 80px;
+    }
+
+    // assets table
+    .asset_symbol{
+        width: 120px;
+    }
+
+    .asset_equity{
+        width: 90px;
+    }
+
+    .asset_available{
+        width: 120px;
+    }
+
+    .asset_inuse{
+        width: 90px;
+    }
+
+    .asset_pnl{
+        width: 100px;
+    }
+
+    .asset_liability{
+        width: 70px;
+    }
+
+    .asset_btn{
+        width: 160px;
+    }
+
+    // assets history table
+    .asset_h_symbol{
+        width: 150px;
+    }
+
+    .asset_h_type{
+        width: 150px;
+    }
+
+    .asset_h_amount{
+        width: 200px;
+    }
+
+    .asset_h_action_time{
+        width: 200px;
+    }
+
+
+    .cross_margin_assets_item{
+        .asset_symbol{
+            width: 100px;
+        }
+
+        .asset_equity{
+            width: 90px;
+        }
+
+        .asset_available{
+            width: 100px;
+        }
+
+        .asset_inuse{
+            width: 80px;
+        }
+
+        .asset_pnl{
+            width: 90px;
+        }
+
+        .asset_liability{
+            width: 70px;
+        }
+
+        .asset_btn{
+            width: 280px;
+        }
+    }
+
+    @media screen and (max-width: 769px) {
+        margin-top: 16px;
+    }
+}
+
+.t_section_np.t_portfolios_cross{
+    padding-top: 0 !important;
+
+    .t_cross_margin_metrics_box{
+        padding: 8px 16px;
+        margin-bottom: 10px;
+        background-color: #1e293b;
+    }
+
+    .portfolio_item_empty{
+        min-height: 251px;
+    }
+}
+
+
+.theme_light{
+    .t_portfolios{
+        .portfolio_item{
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .portfolio_item:last-child{
+            border-bottom: 0;
+        }
+
+        .order_table_header_item{
+            padding-bottom: 0px;
+        }
+
+        .order_item:hover{
+            background-color: #f1f5f9;
+        }
+
+        .loading_order_item.order_item:hover{
+            background-color: #f1f5f9;
+        }
+
+        .tag{
+            background-color: #e2e8f0;
+        }
+
+        .tag_long_order {
+            background-color: #f0fdf4;
+            color: #22C55E !important;
+        }
+
+        .tag_long_short {
+            background-color: #fef2f2;
+            color: #ef4444 !important;
+        }
+    }
+
+    .t_section_np.t_portfolios_cross{
+        padding-top: 1px !important;
+
+        .t_cross_margin_metrics_box{
+            background-color: #e2e8f0;
+        }
+    }
+}

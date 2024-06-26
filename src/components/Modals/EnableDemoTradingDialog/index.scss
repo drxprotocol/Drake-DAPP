@@ -1,0 +1,38 @@
+.enable_demo_trading_dialog {
+    .a_title{
+        max-width: 300px;
+    }
+
+    .content{
+        margin: 25px 0;
+
+        p{
+            margin: 5px 0;
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        p.point{
+            text-indent: 5px;
+        }
+
+        p.m_t_10 {
+            margin-top: 10px;
+        }
+
+        p.m_t_30{
+            margin-top: 30px;
+        }
+    }
+}
+
+.theme_light {
+    .enable_demo_trading_dialog {
+        .content{
+            p{
+                color: #64748b;
+            }
+        }
+    }
+}

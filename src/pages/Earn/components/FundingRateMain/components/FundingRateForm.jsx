@@ -8,21 +8,17 @@ import NumberPicker from "rc-input-number/es";
 import {numberInputValueFormat} from "../../../../../utils/NumberFormat";
 import ApplicationConfig from "../../../../../ApplicationConfig";
 import ContractConfig from "../../../../../contract/ContractConfig";
-import {useContractCall} from "../../../../../components/ContractHooks";
+import {useApprove, useConfiguredContractSend, useContractCall} from "../../../../../components/ContractHooks";
 import {debounce} from "debounce";
 import BigNumber from "bignumber.js";
 import ConditionDisplay from "../../../../../components/ConditionDisplay";
+import {ConnectWalletBtnAdapter} from "../../../../../components/ConnectWalletBtn";
 
-const FundingRateForm = () => {
+const FundingRateForm = ({token}) => {
     const intl = useIntl();
     const web3Context = useContext(WebThreeContext);
 
     const [tab, setTab] = useState('Deposit');
-
-    const token = buildToken('USDC', web3Context.chainId);
-    const asset = {
-        token,
-    };
 
     const [amount, setAmount] = useState('');
     const [txAmount, setTxAmount] = useState(new TokenAmount(0, token, true));
@@ -36,7 +32,7 @@ const FundingRateForm = () => {
         ...ContractConfig.asset.ERC20,
         theAddress: token?.address,
     };
-    const getAssetBalanceCallResult = useContractCall(web3Context.account && tokenContract, 'balanceOf', [web3Context.account]) ?? [];
+    const getAssetBalanceCallResult = useContractCall(tab === 'Deposit' ? web3Context.account && tokenContract : web3Context.account && token?.vault, tab === 'Deposit' ? 'balanceOf' : 'availableBalanceOf', [web3Context.account]) ?? [];
     useEffect(() => {
         if(getAssetBalanceCallResult && getAssetBalanceCallResult.length){
             setBalanceAmount(new TokenAmount(getAssetBalanceCallResult[0], token));
@@ -75,26 +71,16 @@ const FundingRateForm = () => {
         setTxAmount(new TokenAmount(0, token, true));
     };
 
-    const [currentBalance, setCurrentBalance] = useState(new TokenAmount(0, token));
-
     useEffect(() => {
-        if(tab && currentBalance?.amount?.value && balanceAmount?.amount?.value){
-            if(tab === 'Deposit'){
-                setMaxAmount(balanceAmount);
-            }else{
-                setMaxAmount(currentBalance);
-            }
+        if(tab && balanceAmount?.amount?.value){
+            setMaxAmount(balanceAmount);
         }
-    }, [tab, currentBalance, balanceAmount]);
+    }, [tab, balanceAmount]);
 
 
     useEffect(() => {
-        if(tab && percent && currentBalance?.amount?.value && balanceAmount?.amount?.value){
+        if(tab && percent && balanceAmount?.amount?.value){
             let baseAmount = balanceAmount.amountOnChain.bigNumber;
-            if(tab !== 'Deposit'){
-                baseAmount = currentBalance.amountOnChain.bigNumber;
-            }
-
             let percentValue = new BigNumber(percent).div(100);
             let _amount = baseAmount.times(percentValue).toFixed(0);
 
@@ -104,7 +90,29 @@ const FundingRateForm = () => {
             setAmountChecked(true);
             setAmountOverflow(false);
         }
-    }, [tab, currentBalance, balanceAmount, percent]);
+    }, [tab, balanceAmount, percent]);
+
+
+
+
+    const {
+        loaded: tokenApproveLoaded,
+        needToApprove: tokenNeedToApprove,
+        defaultApproveAmount,
+        send: sendApprove,
+    } = useApprove(
+        token,
+        txAmount,
+        token?.vault?.theAddress,
+        `Approve ${token?.symbol} spend on Funding Rare Vault Contract`
+    );
+    useEffect(() => {
+        console.debug(`tokenApproveLoaded =>`, tokenApproveLoaded, `tokenNeedToApprove =>`, tokenNeedToApprove);
+    }, [tokenApproveLoaded, tokenNeedToApprove]);
+
+
+
+
 
 
 
@@ -112,40 +120,81 @@ const FundingRateForm = () => {
     const [submitTxt, setSubmitTxt] = useState(tab);
 
     const updateSubmitTxt = () => {
-        amountOverflow ? setSubmitTxt(`Insufficient Balance`) : setSubmitTxt(tab);
+        if(tab === 'Deposit'){
+            amountOverflow ? setSubmitTxt(`Insufficient Balance`) : (tokenApproveLoaded && tokenNeedToApprove ? setSubmitTxt(`Deposit(2/2)`) : setSubmitTxt(tab) );
+        } else {
+            amountOverflow ? setSubmitTxt(`Insufficient Balance`) : setSubmitTxt(tab);
+        }
     };
 
     useEffect(() => {
         updateSubmitTxt();
-        setSubmitEnable(amountChecked && !amountOverflow);
-    }, [amountChecked, amountOverflow, tab]);
+
+        if(tab === 'Deposit'){
+            setSubmitEnable(amountChecked && !amountOverflow && tokenApproveLoaded && !tokenNeedToApprove);
+        } else {
+            setSubmitEnable(amountChecked && !amountOverflow);
+        }
+    }, [amountChecked, amountOverflow, tab, tokenApproveLoaded, tokenNeedToApprove]);
+
+
+    const onApprove = () => {
+        if(tokenNeedToApprove){
+            let defaultApproveAllowance = defaultApproveAmount?.amountOnChain?.value;
+            console.debug(`approve token: defaultApproveAmount =>`, defaultApproveAmount);
+
+            sendApprove(token?.vault?.theAddress, defaultApproveAllowance);
+        }
+    };
+
+
+
+    const { sendTx: sendDeposit } = useConfiguredContractSend(
+        token.vault,
+        'deposit',
+        'Deposit',
+        null,
+        () => {
+            resetForm()
+        }
+    );
+
+    const { sendTx: sendWithdraw } = useConfiguredContractSend(
+        token.vault,
+        'requestToRedeem',
+        'Request To Redeem',
+        null,
+        () => {
+            resetForm()
+        }
+    );
 
     const onDeposit = () => {
         let _amount = txAmount.amountOnChain.value;
-        // let address = asset.portfolio.address;
+        let receiver = web3Context.account;
         console.debug(
-            // `deposit: address =>`, address,
+            `deposit: `,
             `amountO =>`, txAmount.amount.value,
             `amountH =>`, txAmount.amountOnChain.formativeNumber,
             `amount =>`, _amount,
         );
 
-        // let txContent = `Deposit ${txAmount.amount.formativeValue} ${txAmount.token.name} to ${asset.portfolio.portfolioType} margin`;
-        // sendDeposit(txContent, address, _amount);
+        let txContent = `Deposit ${txAmount.amount.formativeValue} ${txAmount.token.name} to Funding Rate Vault`;
+        sendDeposit(txContent, _amount, receiver);
     };
 
     const onWithdraw = () => {
         let _amount = txAmount.amountOnChain.value;
-        let address = token?.address;
+        let receiver = web3Context?.address;
         console.debug(
-            `withdraw: address =>`, address,
+            `withdraw: address =>`, receiver,
             `amountO =>`, txAmount.amount.value,
             `amountH =>`, txAmount.amountOnChain.formativeNumber,
             `amount =>`, _amount,
         );
 
-        // let txContent = `Withdraw ${txAmount.amount.formativeValue} ${txAmount.token.localName} from ${asset.portfolio.portfolioType} margin`;
-        // sendWithdraw(txContent, address, _amount);
+        let txContent = `Withdraw ${txAmount.amount.formativeValue} ${token.dTokenName} from Funding Rate Vault`;
+        sendWithdraw(txContent, _amount);
     };
 
     const onSubmit = () => {
@@ -173,7 +222,7 @@ const FundingRateForm = () => {
                         <div>{`${tab} asset`}</div>
                         <div className={'f_r_l'}>
                             <span className={'c_text'}>{`Available:`}</span>
-                            <span className={'m_l_5'}>{`${maxAmount.amount.formativeValue} ${tab === 'Deposit' ? asset?.token?.name : asset?.token?.localName}`}</span>
+                            <span className={'m_l_5'}>{`${maxAmount.amount.formativeValue} ${tab === 'Deposit' ? token?.name : token?.dTokenName}`}</span>
                         </div>
                     </div>
 
@@ -193,7 +242,7 @@ const FundingRateForm = () => {
 
                         <div className={'f_r_l'}>
                             <CoinIcon logo={token?.logoURI} className = 'coin_icon_20'/>
-                            <div className={'m_l_10 f_14 b c_hl'}>{`${token?.name}`}</div>
+                            <div className={'m_l_10 f_14 b c_hl'}>{`${tab === 'Deposit' ? token?.name : token?.dTokenName}`}</div>
                         </div>
                     </div>
 
@@ -206,12 +255,33 @@ const FundingRateForm = () => {
                 </div>
 
                 <div className={'f_c_l'}>
-                    <ConditionDisplay display={tab === 'Deposit'}>
-                        <div className={`f_r_l f_14 m_t_25 r_12 squircle_border c_text deposit_tips_box`}>{`1.Approve USDC for deposit | 2. Confirm deposit transaction`}</div>
+                    <ConditionDisplay display={tab === 'Deposit' && tokenApproveLoaded && tokenNeedToApprove}>
+                        <div className={`f_14 m_t_25 r_12 squircle_border c_text deposit_tips_box`}>
+                            <span className={`index_box`}>1</span>
+                            <span>{`Approve USDC for deposit`}</span>
+                            <span className={`index_box`}>2</span>
+                            <span>{`Confirm deposit transaction`}</span>
+                        </div>
                     </ConditionDisplay>
 
-                    <div className={'f_c_c m_t_25'}>
-                        <button className="i_btn sub_btn_primary sub_btn_long_default" disabled={!submitEnable} onClick={() => {onSubmit()}}>{submitTxt}</button>
+                    <ConditionDisplay display={tab !== 'Deposit'}>
+                        <div className={`f_14 m_t_25 r_12 squircle_border c_text deposit_tips_box`}>
+                            {`Withdrawal has a 24-hour delay`}
+                        </div>
+                    </ConditionDisplay>
+
+                    <div className={`f_r_b p_box w_100 ${web3Context.account ? 'm_t_25' : 'm_t_20'} gap-5`}>
+                        <ConditionDisplay display={web3Context.account}>
+                            <ConditionDisplay display={tokenApproveLoaded && tokenNeedToApprove}>
+                                <button className="i_btn w_100 sub_btn_primary sub_btn_long_default" onClick={() => {onApprove()}}>{`${intl.get(`commons.component.input.approve`)}(1/2)`}</button>
+                            </ConditionDisplay>
+
+                            <button className="i_btn w_100 sub_btn_primary sub_btn_long_default" disabled={!submitEnable} onClick={() => {onSubmit()}}>{submitTxt}</button>
+                        </ConditionDisplay>
+
+                        <ConditionDisplay display={!web3Context.account}>
+                            <ConnectWalletBtnAdapter className={'w_100'}/>
+                        </ConditionDisplay>
                     </div>
                 </div>
             </div>

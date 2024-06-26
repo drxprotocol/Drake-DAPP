@@ -1,0 +1,69 @@
+.top_notification_box {
+    position: relative;
+    top: 0px;
+    z-index: 12;
+
+    .n_item{
+        position: absolute;
+        padding: 12px 0;
+        font-size: 14px;
+
+        .section{
+            margin-bottom: 0px;
+        }
+
+        .i_close_w{
+            position: absolute;
+            right: 10px;
+        }
+    }
+    .n_item:last-child{
+        margin-bottom: 0px;
+    }
+
+    .n_b_info{
+        background: #1d4ed8;
+        color: #ffffff;
+    }
+
+    .n_b_tips{
+        background: #1d4ed8;
+        color: #ffffff;
+    }
+
+    .n_title {
+        color: #f8fafc;
+    }
+
+    .n_content {
+        max-width: 290px;
+        color: #94a3b8;
+
+        .n_c_link{
+            color: #94a3b8;
+            text-decoration-line: underline;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+    }
+}
+
+.top_notification_box_has_items{
+    height: 48px;
+}
+
+.theme_light{
+    .top_notification_box {
+        .n_b_info{
+            background: #93c5fd;
+            color: #010207;
+        }
+
+        .n_b_tips{
+            background: #bfdbfe;
+            color: #010207;
+        }
+    }
+}

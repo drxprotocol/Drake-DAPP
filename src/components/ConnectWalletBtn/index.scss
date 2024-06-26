@@ -1,0 +1,30 @@
+.connect_wallet_btn{
+    height: 48px;
+    padding: 12px 20px;
+    color: #3b82f6;
+    background-color: #101625;
+}
+
+@supports (mask-image:paint(id)) or (-webkit-mask-image:paint(id)) {
+    .connect_wallet_btn::after{
+        background-color: #3b82f6 !important;
+    }
+}
+
+@supports not ((mask-image:paint(id)) or (-webkit-mask-image:paint(id))) {
+    .connect_wallet_btn{
+        border: 1px solid #3b82f6 !important;
+    }
+}
+
+.connect_wallet_btn_large {
+    height: 48px !important;
+    line-height: 32px !important;
+    text-align: center;
+}
+
+.theme_light {
+    .connect_wallet_btn{
+        background-color: #f8fafc;
+    }
+}

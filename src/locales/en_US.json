@@ -5,7 +5,7 @@
     "commons.header.nav.staking": "Staking",
     "commons.header.nav.leaderboard": "Leaderboard",
     "commons.header.nav.statistics": "Statistics",
-    "commons.header.nav.doc": "Doc",
+    "commons.header.nav.doc": "Docs",
 
     "commons.header.links.launch_app": "Launch app",
 
@@ -52,15 +52,15 @@
 
     "commons.component.left.menu.earn.items.group.overview.name": "OVERVIEW",
     "commons.component.left.menu.earn.items.group.overview.items.about_earn": "About earn",
-    "commons.component.left.menu.earn.items.group.overview.items.liquidity_earn": "Liquidity earn",
-    "commons.component.left.menu.earn.items.group.overview.items.funding_rate_earn": "Funding rate earn",
+    "commons.component.left.menu.earn.items.group.overview.items.liquidity_earn": "Liquidity Earn",
+    "commons.component.left.menu.earn.items.group.overview.items.funding_rate_earn": "Funding Rate Earn",
     "commons.component.left.menu.earn.items.group.earn.name": "LIQUIDITY VAULT",
     "commons.component.left.menu.earn.items.group.earn.items.dusdc_vault": "dUSDC Vault",
     "commons.component.left.menu.earn.items.group.earn.items.dusdt_vault": "dUSDT Vault",
     "commons.component.left.menu.earn.items.group.earn.items.dweth_vault": "dWETH Vault",
     "commons.component.left.menu.earn.items.group.earn.items.dwbtc_vault": "dWBTC Vault",
     "commons.component.left.menu.earn.items.group.funding_rate_vault.name": "FUNDING RATE VAULT",
-    "commons.component.left.menu.earn.items.group.funding_rate_vault.items.iusdc_vault": "iUSDC Vault",
+    "commons.component.left.menu.earn.items.group.funding_rate_vault.items.frusdc_vault": "frUSDC Vault",
 
     "commons.component.left.menu.staking.items.group.overview.name": "OVERVIEW",
     "commons.component.left.menu.staking.items.group.overview.items.about_staking": "About staking",
@@ -213,10 +213,10 @@
     "page.trading.trading_list.assets.repay": "Repay",
 
 
-    "page.earn.overview.title": "Liquidity earn",
+    "page.earn.overview.title": "Liquidity Earn",
 
 
-    "page.earn.vault.title": "Earn",
+    "page.earn.vault.title": "Liquidity Vault",
     "page.earn.vault.form.steps": "Steps",
     "page.earn.vault.form.amount": "Lock amount",
     "page.earn.vault.form.available": "Available:",
