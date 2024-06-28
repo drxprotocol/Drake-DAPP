@@ -24,7 +24,7 @@ const FooterLinksConfig = [
     {
         name: 'Docs',
         nameI18nKey: 'commons.footer.links.docs',
-        link: '#',
+        link: 'https://docs.drake.exchange/',
         target: '_blank',
     },
     {
@@ -51,22 +51,27 @@ const FooterSocialMediaLinksConfig = [
     {
         name: 'Discord',
         icon: 'i_social_media_discord',
-        link: '#',
+        link: 'https://discord.gg/ZtKakXFu7m',
     },
     {
         name: 'Twitter',
         icon: 'i_social_media_twitter',
         link: 'https://x.com/DrakeExchange',
     },
+    // {
+    //     name: 'Telegram',
+    //     icon: 'i_social_media_telegram',
+    //     link: '#',
+    // },
     {
-        name: 'Telegram',
-        icon: 'i_social_media_telegram',
-        link: '#',
+        name: 'Warpcast',
+        icon: 'i_social_media_warpcast',
+        link: 'https://warpcast.com/drake-exchange',
     },
     {
         name: 'GitHub',
         icon: 'i_social_media_gitHub',
-        link: '#',
+        link: 'https://github.com/drxprotocol',
     },
 ];
 
