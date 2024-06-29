@@ -98,8 +98,8 @@ const rainbowkitConnectorsForEOAWallet = connectorsForWallets(
         {
             groupName: WalletGroup.Familiar.subGroup.Recommended.alias,
             wallets: [
-                metaMaskWallet,
                 coinbaseSmartWallet,
+                metaMaskWallet,
             ],
         },
         {
